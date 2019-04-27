@@ -1,0 +1,26 @@
+{
+  "name": "his-nextjs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "availity-reactstrap-validation": "^2.5.2",
+    "next": "^8.1.0",
+    "next-images": "^1.1.1",
+    "react": "^16.8.6",
+    "react-bootstrap-table-next": "^3.1.1",
+    "react-bootstrap-table2-paginator": "^2.0.6",
+    "react-bootstrap-table2-toolkit": "^1.4.1",
+    "react-dom": "^16.8.6",
+    "react-scroll-up-button": "^1.6.4",
+    "reactstrap": "^8.0.0"
+  }
+}
