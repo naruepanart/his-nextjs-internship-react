@@ -68,7 +68,7 @@ export default class Register extends Component {
 
   render() {
     return (
-      <div className="wrapper">
+      <React.Fragment className="wrapper">
         <div className="container">
           <Row>
             <Col md="12">
@@ -119,7 +119,6 @@ export default class Register extends Component {
                                           size="sm"
                                           onClick={this.toggle}
                                         >
-                                          <i className="fas fa-camera" />
                                           เปิดกล้อง
                                         </Button>
                                         <Modal
@@ -208,7 +207,7 @@ export default class Register extends Component {
           style={{}}
           ToggledStyle={{}}
         />
-      </div>
+      </React.Fragment>
     )
   }
 }

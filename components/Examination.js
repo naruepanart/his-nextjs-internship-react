@@ -3,9 +3,9 @@ import React, { Component } from 'react'
 export default class Examination extends Component {
   render() {
     return (
-      <div>
+      <React.Fragment>
         <p>Examination</p>
-      </div>
+      </React.Fragment>
     )
   }
 }

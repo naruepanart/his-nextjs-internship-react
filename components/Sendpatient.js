@@ -261,7 +261,7 @@ export default class Sendpatient extends Component {
 
   render() {
     return (
-      <div className="wrapper">
+      <React.Fragment className="wrapper">
         <div className="container">
           <Row>
             <Col md="12">
@@ -773,7 +773,7 @@ export default class Sendpatient extends Component {
           style={{}}
           ToggledStyle={{}}
         />
-      </div>
+      </React.Fragment>
     )
   }
 }
