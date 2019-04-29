@@ -8,12 +8,11 @@ import {
   CardBody,
   Label,
   Input,
-  Form,
+  Form
 } from "reactstrap";
 import BootstrapTable from "react-bootstrap-table-next";
 import paginationFactory from "react-bootstrap-table2-paginator";
 import ToolkitProvider, { Search } from "react-bootstrap-table2-toolkit";
-
 
 const columns1 = [
   {
@@ -98,7 +97,6 @@ export default class Banner extends React.Component {
       showing: true,
       hidden: true
     };
-
   }
 
   render() {
@@ -114,164 +112,153 @@ export default class Banner extends React.Component {
               </CardHeader>
               <CardBody className="text-left">
                 <Row>
-      
                   <Col sm={6}>
                     <Row form>
                       <Col sm={12}>
                         <Form>
-                   
-                            <Label className=" mt-2 mr-sm-2"> ชื่อ: </Label>
-                            <Col sm={4}>
-                              <Input
-                                type="text"
-                                name="password"
-                                readOnly={true}
-                                disabled
-                              />
-                            </Col>
-                            <Label className=" mt-2 mr-sm-2"> HN: </Label>
-                            <Col sm={4}>
-                              <Input
-                                type="text"
-                                name="password"
-                                readOnly={true}
-                                disabled
-                              />
-                            </Col>
-                
+                          <Label className=" mt-2 mr-sm-2"> ชื่อ: </Label>
+                          <Col sm={4}>
+                            <Input
+                              type="text"
+                              name="password"
+                              readOnly={true}
+                              disabled
+                            />
+                          </Col>
+                          <Label className=" mt-2 mr-sm-2"> HN: </Label>
+                          <Col sm={4}>
+                            <Input
+                              type="text"
+                              name="password"
+                              readOnly={true}
+                              disabled
+                            />
+                          </Col>
 
-          
-                            <Label className=" mt-2 mr-sm-2"> DOB: </Label>
-                            <Col sm={2}>
-                              <Input
-                                type="text"
-                                name="password"
-                                readOnly={true}
-                                disabled
-                              />
-                            </Col>
-                            <Label className=" mt-2 mr-sm-2"> Age: </Label>
-                            <Col sm={2}>
-                              <Input
-                                type="text"
-                                name="password"
-                                readOnly={true}
-                                disabled
-                              />
-                            </Col>
-                            <Label className=" mt-2 mr-sm-2"> Sex: </Label>
-                            <Col sm={2}>
-                              <Input
-                                type="text"
-                                name="password"
-                                readOnly={true}
-                                disabled
-                              />
-                            </Col>
-                            <Label className=" mt-2 mr-sm-2"> Tel: </Label>
-                            <Col sm={4}>
-                              <Input
-                                type="text"
-                                name="password"
-                                readOnly={true}
-                                disabled
-                              />
-                            </Col>
-                  
-                            <Label className=" mt-2 mr-sm-2">
-                              {" "}
-                              Nationality:{" "}
-                            </Label>
-                            <Col sm={2}>
-                              <Input
-                                type="text"
-                                name="password"
-                                readOnly={true}
-                                disabled
-                              />
-                            </Col>
-                            <Label className=" mt-2 mr-sm-2"> Religion: </Label>
-                            <Col sm={2}>
-                              <Input
-                                type="text"
-                                name="password"
-                                readOnly={true}
-                                disabled
-                              />
-                            </Col>
-                            <Label className=" mt-2 mr-sm-2">
-                              {" "}
-                              Identification Number:{" "}
-                            </Label>
-                            <Col sm={3}>
-                              <Input
-                                type="text"
-                                name="password"
-                                readOnly={true}
-                                disabled
-                              />
-                            </Col>
-                       
-                            <Label className=" mt-2 mr-sm-2"> Address: </Label>
-                            <Col sm={11}>
-                              <Input
-                                type="text"
-                                name="password"
-                                readOnly={true}
-                                disabled
-                              />
-                            </Col>
-                   
+                          <Label className=" mt-2 mr-sm-2"> DOB: </Label>
+                          <Col sm={2}>
+                            <Input
+                              type="text"
+                              name="password"
+                              readOnly={true}
+                              disabled
+                            />
+                          </Col>
+                          <Label className=" mt-2 mr-sm-2"> Age: </Label>
+                          <Col sm={2}>
+                            <Input
+                              type="text"
+                              name="password"
+                              readOnly={true}
+                              disabled
+                            />
+                          </Col>
+                          <Label className=" mt-2 mr-sm-2"> Sex: </Label>
+                          <Col sm={2}>
+                            <Input
+                              type="text"
+                              name="password"
+                              readOnly={true}
+                              disabled
+                            />
+                          </Col>
+                          <Label className=" mt-2 mr-sm-2"> Tel: </Label>
+                          <Col sm={4}>
+                            <Input
+                              type="text"
+                              name="password"
+                              readOnly={true}
+                              disabled
+                            />
+                          </Col>
+
+                          <Label className=" mt-2 mr-sm-2">
+                            {" "}
+                            Nationality:{" "}
+                          </Label>
+                          <Col sm={2}>
+                            <Input
+                              type="text"
+                              name="password"
+                              readOnly={true}
+                              disabled
+                            />
+                          </Col>
+                          <Label className=" mt-2 mr-sm-2"> Religion: </Label>
+                          <Col sm={2}>
+                            <Input
+                              type="text"
+                              name="password"
+                              readOnly={true}
+                              disabled
+                            />
+                          </Col>
+                          <Label className=" mt-2 mr-sm-2">
+                            {" "}
+                            Identification Number:{" "}
+                          </Label>
+                          <Col sm={3}>
+                            <Input
+                              type="text"
+                              name="password"
+                              readOnly={true}
+                              disabled
+                            />
+                          </Col>
+
+                          <Label className=" mt-2 mr-sm-2"> Address: </Label>
+                          <Col sm={11}>
+                            <Input
+                              type="text"
+                              name="password"
+                              readOnly={true}
+                              disabled
+                            />
+                          </Col>
                         </Form>
                       </Col>
                     </Row>
                   </Col>
                   <Col sm={1}>
-                  
-                      <Col sm={12}>
-                        <div className="p-5 mb-1  bg-success text-black">
-                          <big>
-                            <b> A </b>
-                          </big>
-                        </div>
-                
-                          <Button type="button" color="secondary" block>
-                            {" "}
-                            View{" "}
-                          </Button>
-                       
-                      </Col>
-              
+                    <Col sm={12}>
+                      <div className="p-5 mb-1  bg-success text-black">
+                        <big>
+                          <b> A </b>
+                        </big>
+                      </div>
+
+                      <Button type="button" color="secondary" block>
+                        {" "}
+                        View{" "}
+                      </Button>
+                    </Col>
                   </Col>
                   <Col sm={3}>
-                  
-                      <Label for="exampleEmail" className=" mt-2 mr-sm-2">
-                        {" "}
-                        วันที่ลงประวัติการเเพ้:{" "}
-                      </Label>
-                      <Col sm={4}>
-                        <Input
-                          type="text"
-                          name="password"
-                          readOnly={true}
-                          disabled
-                        />
-                      </Col>
-                      <Col sm={4}>
-                        <Input
-                          type="text"
-                          name="password"
-                          readOnly={true}
-                          disabled
-                        />
-                      </Col>
-        
+                    <Label for="exampleEmail" className=" mt-2 mr-sm-2">
+                      {" "}
+                      วันที่ลงประวัติการเเพ้:{" "}
+                    </Label>
+                    <Col sm={4}>
+                      <Input
+                        type="text"
+                        name="password"
+                        readOnly={true}
+                        disabled
+                      />
+                    </Col>
+                    <Col sm={4}>
+                      <Input
+                        type="text"
+                        name="password"
+                        readOnly={true}
+                        disabled
+                      />
+                    </Col>
 
-                      <Label for="exampleEmail" className=" mt-2 mr-sm-2">
-                        {" "}
-                        <b> ไม่มีประวัติการเเพ้ยาใดๆ </b>
-                      </Label>
-      
+                    <Label for="exampleEmail" className=" mt-2 mr-sm-2">
+                      {" "}
+                      <b> ไม่มีประวัติการเเพ้ยาใดๆ </b>
+                    </Label>
                   </Col>
                 </Row>
                 <hr />
@@ -282,86 +269,69 @@ export default class Banner extends React.Component {
                       <Col sm={12}>
                         <Col sm={12}>
                           <Form>
-        
-                              <Label
-                                for="exampleEmail"
-                                className=" mt-2 mr-sm-2"
-                              >
-                                {" "}
-                                VN:{" "}
-                              </Label>
-                              <Col sm={1}>
-                                <Input
-                                  type="text"
-                                  name="password"
-                                  readOnly={true}
-                                  disabled
-                                />
-                              </Col>
-                              <Label
-                                for="exampleEmail"
-                                className=" mt-2 mr-sm-2"
-                              >
-                                {" "}
-                                Date:{" "}
-                              </Label>
-                              <Col sm={1}>
-                                <Input
-                                  type="text"
-                                  name="password"
-                                  readOnly={true}
-                                  disabled
-                                />
-                              </Col>
-                              <Label
-                                for="exampleEmail"
-                                className=" mt-2 mr-sm-2"
-                              >
-                                {" "}
-                                Time:{" "}
-                              </Label>
-                              <Col sm={1}>
-                                <Input
-                                  type="text"
-                                  name="password"
-                                  readOnly={true}
-                                  disabled
-                                />
-                              </Col>
-                              <Label
-                                for="exampleEmail"
-                                className=" mt-2 mr-sm-2"
-                              >
-                                {" "}
-                                Doctor:{" "}
-                              </Label>
-                              <Col sm={2}>
-                                <Input
-                                  type="text"
-                                  name="password"
-                                  readOnly={true}
-                                  disabled
-                                />
-                              </Col>
-                              <Label
-                                for="exampleEmail"
-                                className=" mt-2 mr-sm-2"
-                              >
-                                {" "}
-                                Location:{" "}
-                              </Label>
-                              <Col sm={2}>
-                                <Input
-                                  type="text"
-                                  name="password"
-                                  readOnly={true}
-                                  disabled
-                                />
-                              </Col>
-                              <Button color="success">
-                                <i className="far fa-address-book" /> Note{" "}
-                              </Button>{" "}
-              
+                            <Label for="exampleEmail" className=" mt-2 mr-sm-2">
+                              {" "}
+                              VN:{" "}
+                            </Label>
+                            <Col sm={1}>
+                              <Input
+                                type="text"
+                                name="password"
+                                readOnly={true}
+                                disabled
+                              />
+                            </Col>
+                            <Label for="exampleEmail" className=" mt-2 mr-sm-2">
+                              {" "}
+                              Date:{" "}
+                            </Label>
+                            <Col sm={1}>
+                              <Input
+                                type="text"
+                                name="password"
+                                readOnly={true}
+                                disabled
+                              />
+                            </Col>
+                            <Label for="exampleEmail" className=" mt-2 mr-sm-2">
+                              {" "}
+                              Time:{" "}
+                            </Label>
+                            <Col sm={1}>
+                              <Input
+                                type="text"
+                                name="password"
+                                readOnly={true}
+                                disabled
+                              />
+                            </Col>
+                            <Label for="exampleEmail" className=" mt-2 mr-sm-2">
+                              {" "}
+                              Doctor:{" "}
+                            </Label>
+                            <Col sm={2}>
+                              <Input
+                                type="text"
+                                name="password"
+                                readOnly={true}
+                                disabled
+                              />
+                            </Col>
+                            <Label for="exampleEmail" className=" mt-2 mr-sm-2">
+                              {" "}
+                              Location:{" "}
+                            </Label>
+                            <Col sm={2}>
+                              <Input
+                                type="text"
+                                name="password"
+                                readOnly={true}
+                                disabled
+                              />
+                            </Col>
+                            <Button color="success">
+                              <i className="far fa-address-book" /> Note{" "}
+                            </Button>{" "}
                           </Form>
                         </Col>
                       </Col>
@@ -385,7 +355,10 @@ export default class Banner extends React.Component {
                           >
                             {props => (
                               <div>
-                                <SearchBar {...props.searchProps} tableId="tableId"/>
+                                <SearchBar
+                                  {...props.searchProps}
+                                  tableId="tableId"
+                                />
                                 <hr />
                                 <BootstrapTable
                                   selectRow={selectRow}
@@ -397,28 +370,24 @@ export default class Banner extends React.Component {
                             )}
                           </ToolkitProvider>
                           <br />
-                         
-                            <Button type="button" color="secondary">
-                              {" "}
-                              SUM{" "}
-                            </Button>{" "}
-                
+                          <Button type="button" color="secondary">
+                            {" "}
+                            SUM{" "}
+                          </Button>{" "}
                         </Col>
                       </Row>
                     </div>
                   </Col>
                   <Col sm="1">
-                  
-                      <Button
-                        color="primary"
-                        onClick={() =>
-                          this.setState({ hidden: !hidden, showing: !showing })
-                        }
-                      >
-                        {" "}
-                        ย่อ/ขยาย{" "}
-                      </Button>{" "}
-           
+                    <Button
+                      color="primary"
+                      onClick={() =>
+                        this.setState({ hidden: !hidden, showing: !showing })
+                      }
+                    >
+                      {" "}
+                      ย่อ/ขยาย{" "}
+                    </Button>{" "}
                   </Col>
                 </Row>
                 <div className="text-right">
