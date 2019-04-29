@@ -1,5 +1,5 @@
-import React from 'react'
-import Link from 'next/link';
+import React from "react";
+import Link from "next/link";
 import { Col, Row, Button } from "reactstrap";
 import Regis from "./static/iconSetMainForm64_addPatient.png";
 import SendP from "./static/iconSetMainForm64_sendPatient.png";
@@ -10,10 +10,9 @@ import Xray from "./static/iconSetMainForm64_xray-15.png";
 import Coin from "./static/iconSetMainForm64_coin.png";
 import Manage from "./static/iconSetMainForm64_calendar.png";
 
-
 const MenuTopMain = () => {
   return (
-    <React.Fragment>
+    <div>
       <Row>
         <Col md="12">
           <Link href="/register">
@@ -23,7 +22,7 @@ const MenuTopMain = () => {
                 <br />
               </span>
               ทะเบียนผู้ป่วย
-          </Button>
+            </Button>
           </Link>
           <Link href="/sendpatient">
             <Button color="link" size="sm" style={{ fontSize: "12px" }}>
@@ -32,7 +31,7 @@ const MenuTopMain = () => {
                 <br />
               </span>
               ส่งตรวจผู้ป่วย
-          </Button>
+            </Button>
           </Link>
 
           <Link href="/examination">
@@ -42,7 +41,7 @@ const MenuTopMain = () => {
                 <br />
               </span>
               งานหน้าห้องตรวจ
-          </Button>
+            </Button>
           </Link>
           <Link href="/examdoctor">
             <Button color="link" size="sm" style={{ fontSize: "12px" }}>
@@ -51,7 +50,7 @@ const MenuTopMain = () => {
                 <br />
               </span>
               งานห้องตรวจแพทย์
-          </Button>
+            </Button>
           </Link>
           <Link href="/dispensing">
             <Button color="link" size="sm" style={{ fontSize: "12px" }}>
@@ -60,7 +59,7 @@ const MenuTopMain = () => {
                 <br />
               </span>
               งานห้องจ่ายยา
-          </Button>
+            </Button>
           </Link>
 
           <Link href="/">
@@ -70,7 +69,7 @@ const MenuTopMain = () => {
                 <br />
               </span>
               งานหน้าห้อง X-ray
-          </Button>
+            </Button>
           </Link>
           <Link href="/">
             <Button color="link" size="sm" style={{ fontSize: "12px" }}>
@@ -79,7 +78,7 @@ const MenuTopMain = () => {
                 <br />
               </span>
               งานห้องการเงิน
-          </Button>
+            </Button>
           </Link>
           <Link href="/">
             <Button color="link" size="sm" style={{ fontSize: "12px" }}>
@@ -88,13 +87,13 @@ const MenuTopMain = () => {
                 <br />
               </span>
               Manage Session
-          </Button>
+            </Button>
           </Link>
         </Col>
       </Row>
-      <hr></hr>
-    </React.Fragment>
-  )
-}
+      <hr />
+    </div>
+  );
+};
 
-export default MenuTopMain
+export default MenuTopMain;
