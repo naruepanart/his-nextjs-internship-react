@@ -68,7 +68,7 @@ export default class Register extends Component {
 
   render() {
     return (
-      <React.Fragment className="wrapper">
+      <div className="wrapper">
         <div className="container">
           <Row>
             <Col md="12">
@@ -207,7 +207,7 @@ export default class Register extends Component {
           style={{}}
           ToggledStyle={{}}
         />
-      </React.Fragment>
+      </div>
     )
   }
 }
