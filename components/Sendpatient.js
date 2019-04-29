@@ -1,4 +1,4 @@
-import React, { Component } from "react"
+import React, { Component } from "react";
 import {
   Row,
   Col,
@@ -11,88 +11,88 @@ import {
   Form,
   FormGroup,
   Label,
-  CardHeader,
-} from "reactstrap"
-import { VerticleButton as ScrollUpButton } from "react-scroll-up-button"
-import BootstrapTable from "react-bootstrap-table-next"
-import paginationFactory from "react-bootstrap-table2-paginator"
-import ToolkitProvider, { Search } from "react-bootstrap-table2-toolkit"
+  CardHeader
+} from "reactstrap";
+import { VerticleButton as ScrollUpButton } from "react-scroll-up-button";
+import BootstrapTable from "react-bootstrap-table-next";
+import paginationFactory from "react-bootstrap-table2-paginator";
+import ToolkitProvider, { Search } from "react-bootstrap-table2-toolkit";
 
 const columns1 = [
   {
     dataField: "id",
     text: "วันที่รับบริการ",
-    sort: true,
+    sort: true
   },
   {
     dataField: "symptom",
     text: "อาการสำคัญ",
-    sort: true,
+    sort: true
   },
   {
     dataField: "authority",
     text: "สิทธิรักษา",
-    sort: true,
+    sort: true
   },
   {
     dataField: "doctor",
     text: "Doctor",
-    sort: true,
+    sort: true
   },
   {
     dataField: "location",
     text: "Location",
-    sort: true,
-  },
-]
+    sort: true
+  }
+];
 
 const columns2 = [
   {
     dataField: "id",
     text: "ลำดับ",
-    sort: true,
+    sort: true
   },
   {
     dataField: "authority",
     text: "สิทธิ",
-    sort: true,
+    sort: true
   },
   {
     dataField: "tutelage",
     text: "ความคุ้มครอง",
-    sort: true,
+    sort: true
   },
   {
     dataField: "contact",
     text: "Contact",
-    sort: true,
-  },
-]
+    sort: true
+  }
+];
 
 const columns3 = [
   {
     dataField: "id",
     text: "ลำดับ",
-    sort: true,
+    sort: true
   },
   {
     dataField: "schedule1",
     text: "นัดหมาย1",
-    sort: true,
+    sort: true
   },
   {
     dataField: "schedule2",
     text: "นัดหมาย2",
-    sort: true,
+    sort: true
   },
   {
     dataField: "schedule3",
     text: "นัดหมาย3",
-    sort: true,
-  },
-]
+    sort: true
+  }
+];
 
-const { SearchBar } = Search
+const { SearchBar } = Search;
 
 const rows1 = [
   {
@@ -100,25 +100,25 @@ const rows1 = [
     symptom: "ปวดตับ",
     authority: "ข้าราชการ ชำระเอง OPD&IPD",
     doctor: "นะโม",
-    location: "อายุรกรรม",
-  },
-]
+    location: "อายุรกรรม"
+  }
+];
 
 const rows2 = [
   { id: 1, authority: "Thai", tutelage: "111", contact: "088-xxx" },
-  { id: 2, authority: "Benz", tutelage: "888", contact: "088-xxx" },
-]
+  { id: 2, authority: "Benz", tutelage: "888", contact: "088-xxx" }
+];
 
 const rows3 = [
-  { id: "1", schedule1: "Hello", schedule2: "10/01/2561", schedule3: "OK" },
-]
+  { id: "1", schedule1: "Hello", schedule2: "10/01/2561", schedule3: "OK" }
+];
 
 const customTotal = (from, to, size) => (
   <span className="react-bootstrap-table-pagination-total">
     {" "}
     &nbsp; Showing {from} to {to} of {size} Results
   </span>
-)
+);
 
 const options1 = {
   paginationSize: 4,
@@ -136,18 +136,18 @@ const options1 = {
   sizePerPageList: [
     {
       text: "5",
-      value: 5,
+      value: 5
     },
     {
       text: "10",
-      value: 10,
+      value: 10
     },
     {
       text: "All",
-      value: rows2.length,
-    },
-  ],
-}
+      value: rows2.length
+    }
+  ]
+};
 
 const options2 = {
   paginationSize: 4,
@@ -165,18 +165,18 @@ const options2 = {
   sizePerPageList: [
     {
       text: "5",
-      value: 5,
+      value: 5
     },
     {
       text: "10",
-      value: 10,
+      value: 10
     },
     {
       text: "All",
-      value: rows2.length,
-    },
-  ],
-}
+      value: rows2.length
+    }
+  ]
+};
 const options3 = {
   paginationSize: 4,
   pageStartIndex: 1,
@@ -193,26 +193,26 @@ const options3 = {
   sizePerPageList: [
     {
       text: "5",
-      value: 5,
+      value: 5
     },
     {
       text: "10",
-      value: 10,
+      value: 10
     },
     {
       text: "All",
-      value: rows3.length,
-    },
-  ],
-}
+      value: rows3.length
+    }
+  ]
+};
 
 export default class Sendpatient extends Component {
   constructor(props) {
-    super(props)
+    super(props);
     this.state = {
       modal: false,
-      disabled: false,
-    }
+      disabled: false
+    };
     this.state = {
       Search: "",
       PatientFullName: "", //ชื่อภาษาไทย
@@ -242,22 +242,21 @@ export default class Sendpatient extends Component {
       Mark: "", //หมายเหตุ
       PrintVisitSlip: "", //พิมพ์ใบvisit
       Thai: "", //ภาษาไทย
-      english: "", //ภาษาอังกฤษ
-    }
-    this.toggle = this.toggle.bind(this)
+      english: "" //ภาษาอังกฤษ
+    };
   }
 
   handleEnableField = () => {
     this.setState({
-      disabled: !this.state.disabled,
-    })
-  }
+      disabled: !this.state.disabled
+    });
+  };
 
-  toggle() {
+  toggle = () => {
     this.setState({
-      modal: !this.state.modal,
-    })
-  }
+      modal: !this.state.modal
+    });
+  };
 
   render() {
     return (
@@ -610,20 +609,38 @@ export default class Sendpatient extends Component {
                               </Label>
                               <FormGroup check>
                                 <Label check>
-                                  <Input type="radio" name="radio1" name="SB" value="เบิกค่ารักษา" />
-                                  เบิกค่ารักษา</Label>
+                                  <Input
+                                    type="radio"
+                                    name="radio1"
+                                    name="SB"
+                                    value="เบิกค่ารักษา"
+                                  />
+                                  เบิกค่ารักษา
+                                </Label>
                               </FormGroup>
                               <FormGroup check>
                                 <Label check>
-                                  <Input type="radio" name="radio1" name="NoteOfLeave" value="ลา" />
-                                  ลา</Label>
+                                  <Input
+                                    type="radio"
+                                    name="radio1"
+                                    name="NoteOfLeave"
+                                    value="ลา"
+                                  />
+                                  ลา
+                                </Label>
                               </FormGroup>
                               <FormGroup check>
                                 <Label check>
-                                  <Input type="radio" name="radio1" name="SBNL" value="เบิกค่ารักษาเเละลา" />
-                                  เบิกค่ารักษาเเละลา</Label>
+                                  <Input
+                                    type="radio"
+                                    name="radio1"
+                                    name="SBNL"
+                                    value="เบิกค่ารักษาเเละลา"
+                                  />
+                                  เบิกค่ารักษาเเละลา
+                                </Label>
                               </FormGroup>
-                              <br></br>
+                              <br />
                               <Col md="5">
                                 <Label>จำนวน</Label>
                                 <Input
@@ -654,26 +671,41 @@ export default class Sendpatient extends Component {
                                     />
                                   </Col>
                                 </Row>
-
                               </Col>
                             </Col>
                             <Col md="3">
                               <FormGroup check>
                                 <Label check>
-                                  <Input type="checkbox" name="COMA" value="ClaimSlip" />{' '}
-                                  ใบรับรองยานอกบัญชี</Label>
+                                  <Input
+                                    type="checkbox"
+                                    name="COMA"
+                                    value="ClaimSlip"
+                                  />{" "}
+                                  ใบรับรองยานอกบัญชี
+                                </Label>
                               </FormGroup>
                               <FormGroup check>
                                 <Label check>
-                                  <Input type="checkbox" name="ClaimSlip" value="ClaimSlip" />{' '}
-                                  ใบเคลม</Label>
+                                  <Input
+                                    type="checkbox"
+                                    name="ClaimSlip"
+                                    value="ClaimSlip"
+                                  />{" "}
+                                  ใบเคลม
+                                </Label>
                               </FormGroup>
                             </Col>
                             <Col md="4">
                               <FormGroup check>
                                 <Label check>
-                                  <Input type="checkbox" name="Other" value="Other" onClick={this.handleEnableField} />
-                                  อื่นๆ ระบุ</Label>
+                                  <Input
+                                    type="checkbox"
+                                    name="Other"
+                                    value="Other"
+                                    onClick={this.handleEnableField}
+                                  />
+                                  อื่นๆ ระบุ
+                                </Label>
                               </FormGroup>
 
                               <Input
@@ -719,21 +751,35 @@ export default class Sendpatient extends Component {
                             <Col md="4">
                               <FormGroup check>
                                 <Label check>
-                                  <Input type="checkbox" name="พิมพ์ใบ Visit Slip" value="PrintVisitSlip" />{' '}
-                                  พิมพ์ใบ Visit Slip</Label>
+                                  <Input
+                                    type="checkbox"
+                                    name="พิมพ์ใบ Visit Slip"
+                                    value="PrintVisitSlip"
+                                  />{" "}
+                                  พิมพ์ใบ Visit Slip
+                                </Label>
                               </FormGroup>
-
                             </Col>
                             <Col md="5">
                               <FormGroup check>
                                 <Label check>
-                                  <Input type="checkbox" name="Thai" value="Thai" />{' '}
-                                  ภาษาไทย</Label>
+                                  <Input
+                                    type="checkbox"
+                                    name="Thai"
+                                    value="Thai"
+                                  />{" "}
+                                  ภาษาไทย
+                                </Label>
                               </FormGroup>
                               <FormGroup check>
                                 <Label check>
-                                  <Input type="checkbox" name="english" value="english" />{' '}
-                                  ภาษาอังกฤษ</Label>
+                                  <Input
+                                    type="checkbox"
+                                    name="english"
+                                    value="english"
+                                  />{" "}
+                                  ภาษาอังกฤษ
+                                </Label>
                               </FormGroup>
                             </Col>
                           </Row>
@@ -774,6 +820,6 @@ export default class Sendpatient extends Component {
           ToggledStyle={{}}
         />
       </div>
-    )
+    );
   }
 }

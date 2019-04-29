@@ -1,4 +1,4 @@
-import React, { Component } from "react"
+import React, { Component } from "react";
 import {
   Row,
   Col,
@@ -12,19 +12,19 @@ import {
   ModalBody,
   ModalFooter,
   Input,
-  Form,
-} from "reactstrap"
-import { VerticleButton as ScrollUpButton } from "react-scroll-up-button"
-import picture from "./static/picture.jpg"
-import TabInRegister from "./TabInRegister"
+  Form
+} from "reactstrap";
+import { VerticleButton as ScrollUpButton } from "react-scroll-up-button";
+import picture from "./static/picture.jpg";
+import TabInRegister from "./TabInRegister";
 
 export default class Register extends Component {
   constructor(props) {
-    super(props)
+    super(props);
     this.state = {
       modal: false,
-      disabled: false,
-    }
+      disabled: false
+    };
 
     this.state = {
       Search: "",
@@ -55,16 +55,15 @@ export default class Register extends Component {
       Mark: "", //หมายเหตุ
       PrintVisitSlip: "", //พิมพ์ใบvisit
       Thai: "", //ภาษาไทย
-      Eng: "", //ภาษาอังกฤษ
-    }
-    this.toggle = this.toggle.bind(this)
+      Eng: "" //ภาษาอังกฤษ
+    };
   }
 
-  toggle() {
+  toggle = () => {
     this.setState({
-      modal: !this.state.modal,
-    })
-  }
+      modal: !this.state.modal
+    });
+  };
 
   render() {
     return (
@@ -208,6 +207,6 @@ export default class Register extends Component {
           ToggledStyle={{}}
         />
       </div>
-    )
+    );
   }
 }
