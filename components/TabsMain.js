@@ -47,14 +47,14 @@ export default class Navbarmain extends Component {
         <TabContent activeTab={this.state.activeTab}>
           <TabPane tabId="1">
             <Row>
-              <Col md="12">
+              <Col sm="12">
                 <MenuTopMain></MenuTopMain>
               </Col>
             </Row>
           </TabPane>
           <TabPane tabId="2">
             <Row>
-              <Col md="12">
+              <Col sm="12">
                 <h1>Master</h1>
               </Col>
             </Row>
