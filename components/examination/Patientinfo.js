@@ -4,7 +4,8 @@ import {
   Col,
   Button,
   Card,
-  CardHeader,
+  NavbarBrand,
+  Navbar,
   CardBody,
   Label,
   Input,
@@ -13,6 +14,10 @@ import {
 import BootstrapTable from "react-bootstrap-table-next";
 import paginationFactory from "react-bootstrap-table2-paginator";
 import ToolkitProvider, { Search } from "react-bootstrap-table2-toolkit";
+
+const fontSize18px = {
+  fontSize: "18px",
+};
 
 const columns1 = [
   {
@@ -107,9 +112,13 @@ export default class Banner extends React.Component {
         <Row>
           <Col sm={12}>
             <Card>
-              <CardHeader className="text-left">
-                <h5>Patient Info</h5>
-              </CardHeader>
+              <Navbar color="primary" dark className="py-md-0">
+                <NavbarBrand href="#" style={fontSize18px}>
+                  Patient Info
+                  </NavbarBrand>
+              </Navbar>
+
+
               <CardBody className="text-left">
                 <Row>
                   <Col sm={6}>
@@ -381,29 +390,31 @@ export default class Banner extends React.Component {
                   <Col sm="1">
                     <Button
                       color="primary"
+                      size="sm"
                       onClick={() =>
                         this.setState({ hidden: !hidden, showing: !showing })
                       }
                     >
-                      {" "}
-                      ย่อ/ขยาย{" "}
-                    </Button>{" "}
+      
+                      ย่อ/ขยาย
+                    </Button>
                   </Col>
                 </Row>
+                    <br></br>
                 <div className="text-right">
-                  <Button color="primary">
+                  <Button color="primary" size="sm">
                     <i className="fas fa-plus-circle" /> Add Order{" "}
                   </Button>{" "}
-                  <Button color="danger">
+                  <Button color="danger" size="sm">
                     <i className="fas fa-edit" /> Edit Right{" "}
                   </Button>{" "}
-                  <Button color="success">
+                  <Button color="success" size="sm">
                     <i className="fas fa-pencil-alt" /> Edit Billing{" "}
                   </Button>{" "}
-                  <Button color="primary">
+                  <Button color="primary" size="sm">
                     <i className="fas fa-print" /> Print{" "}
                   </Button>{" "}
-                  <Button color="success">
+                  <Button color="success" size="sm">
                     <i className="far fa-money-bill-alt" /> Payment{" "}
                   </Button>{" "}
                 </div>
