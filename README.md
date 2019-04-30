@@ -8,28 +8,35 @@ npm i && npm run dev
 
 See : http://localhost:3000
 
-
-Tutorial
 ```
 [JavaScript for React Developers](https://www.youtube.com/watch?v=NCwa_xi0Uuc)
 
 [วิธีทำให้ Code ของคุณง่ายขึ้นด้วย map(), reduce() และ filter() ใน JavaScript](https://www.techstarthailand.com/blog/detail/How-to-simplify-your-codebase-with-map-reduce-and-filter-in-JavaScript/837?fbclid=IwAR0hzyfn5EeCwSgKjL2mqvVr4O-01R471y4suj0b25TGZOBVhr2me_esSdU)
 
-
 ```
 
-========================================
+==================================================
+
+## Roadmap code
 
 ## การ setState
+
 ```
 this.setState(prevState => ({
     isToggleOn: !prevState.isToggleOn
   }));
+------------------------------------------
+toggleModal = () => {
+    this.setState((prevState) => ({
+      isModalOpen: !prevState.isModalOpen
+    }));
+  }
 ```
 
 ## การส่งข้อมูล
+
 ```
- export default class HelloWorld extends Component {
+export default class HelloWorld extends Component {
   import React, { Component } from "react"
   state = {
     message: 'Hi'
@@ -45,10 +52,11 @@ this.setState(prevState => ({
       <input type="button" value="Log" onClick={this.logMessage} />
     );
   }
-} 
+}
 ```
 
 ## การส่งข้อมูลข้าม components
+
 ```
 import React, { Component } from "react";
 import About from "./getstate";
@@ -81,6 +89,7 @@ export default class index extends Component {
 }
 
 ```
+
 ```
 import React from "react";
 
@@ -98,6 +107,7 @@ export default About;
 ```
 
 ## การ post data
+
 ```
 import React from "react"
 import axios from "axios"
@@ -147,7 +157,8 @@ export default class PersonList extends React.Component {
 
 ```
 
-## การ Get data
+## การ get data with axios tool
+
 ```
 async componentDidMount() {
     const uri = 'https://backend-jsonserver-test.herokuapp.com/users'
@@ -156,7 +167,8 @@ async componentDidMount() {
   }
 ```
 
-## ค้นหาข้อมูลใน Table
+## ค้นหาข้อมูลใน table
+
 ```
 
 import React, { Component } from "react"
@@ -225,5 +237,5 @@ export default class tabletest extends Component {
       </div>
     )
   }
-} 
+}
 ```
