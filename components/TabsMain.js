@@ -35,14 +35,14 @@ export default class Navbarmain extends Component {
               Home
             </NavLink>
           </NavItem>
-          <NavItem>
+         {/*  <NavItem>
             <NavLink
               className={classnames({ active: this.state.activeTab === '2' })}
               onClick={() => { this.toggle('2'); }}
             >
               Master
             </NavLink>
-          </NavItem>
+          </NavItem> */}
         </Nav>
         <TabContent activeTab={this.state.activeTab}>
           <TabPane tabId="1">
@@ -52,13 +52,13 @@ export default class Navbarmain extends Component {
               </Col>
             </Row>
           </TabPane>
-          <TabPane tabId="2">
+          {/* <TabPane tabId="2">
             <Row>
               <Col sm="12">
                 <h1>Master</h1>
               </Col>
             </Row>
-          </TabPane>
+          </TabPane> */}
         </TabContent>
 
       </div>
