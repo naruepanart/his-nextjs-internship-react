@@ -18,6 +18,10 @@ import { VerticleButton as ScrollUpButton } from "react-scroll-up-button";
 import picture from "./static/picture.jpg";
 import TabInRegister from "./TabInRegister";
 
+const fontSize18px = {
+  fontSize: "18px",
+};
+
 export default class Register extends Component {
   constructor(props) {
     super(props);
@@ -73,7 +77,7 @@ export default class Register extends Component {
             <Col md="12">
               <Card>
                 <Navbar color="primary" dark className="py-md-0">
-                  <NavbarBrand href="#" style={{ fontSize: "18px" }}>
+                  <NavbarBrand href="#" style={fontSize18px}>
                     {" "}
                     ทะเบียนผู้ป่วย{" "}
                   </NavbarBrand>

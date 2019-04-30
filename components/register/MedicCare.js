@@ -4,6 +4,10 @@ import BootstrapTable from "react-bootstrap-table-next"
 import paginationFactory from "react-bootstrap-table2-paginator"
 import ToolkitProvider, { Search } from "react-bootstrap-table2-toolkit"
 
+const fontSize12px = {
+  fontSize: "12px",
+};
+
 const columns1 = [
   {
     dataField: "id",
@@ -81,6 +85,8 @@ const rows2 = [
     tutelage: "ok",
     contact: "088-xxx",
     allclaim: "wait",
+    hos: "allhos",
+    numbercontact: "044-xxx",
     useoften: "sometimes",
     start: "start",
     end: "end",
@@ -167,7 +173,7 @@ export default class MedicCare extends React.Component {
   }
   render() {
     return (
-      <div style={{ fontSize: "12px" }}>
+      <div style={fontSize12px}>
         <Row>
           <Col md="6">
             {/* ประเภทสิทธิ */}
@@ -193,7 +199,7 @@ export default class MedicCare extends React.Component {
           </Col>
           <Col md="6">
             {/* สิทธิรักษาทั้งหมด */}
-            <Card style={{ height: "95%" }}>
+            <Card>
               <CardHeader body className="text-left">
                 <h5> สิทธิรักษาทั้งหมด </h5>
               </CardHeader>
@@ -222,23 +228,25 @@ export default class MedicCare extends React.Component {
           </Col>
         </Row>
         <hr />
-        <CardHeader>
-          <h5> สิทธิคนไข้ทั้งหมด </h5>
-        </CardHeader>
-        <br />
-        <ToolkitProvider keyField="id" data={rows2} columns={columns2} search>
-          {props => (
-            <div>
-              <SearchBar {...props.searchProps} />
-              <hr />
-              <BootstrapTable
-                hover={true}
-                pagination={paginationFactory(options2)}
-                {...props.baseProps}
-              />
-            </div>
-          )}
-        </ToolkitProvider>
+        <Card>
+          <CardHeader>
+            <h5> สิทธิคนไข้ทั้งหมด </h5>
+          </CardHeader>
+          <br />
+          <ToolkitProvider keyField="id" data={rows2} columns={columns2} search>
+            {props => (
+              <div>
+                <SearchBar {...props.searchProps} />
+                <hr />
+                <BootstrapTable
+                  hover={true}
+                  pagination={paginationFactory(options2)}
+                  {...props.baseProps}
+                />
+              </div>
+            )}
+          </ToolkitProvider>
+        </Card>
       </div>
     )
   }

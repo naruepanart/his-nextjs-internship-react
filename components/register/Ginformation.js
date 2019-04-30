@@ -17,6 +17,10 @@ import ToolkitProvider, { Search } from "react-bootstrap-table2-toolkit"
 
 const { SearchBar } = Search
 
+const fontSize12px = {
+  fontSize: "12px",
+};
+
 const columns1 = [
   {
     dataField: "id",
@@ -147,7 +151,7 @@ class Ginformation extends React.Component {
   }
   render() {
     return (
-      <div style={{ fontSize: "12px" }}>
+      <div style={fontSize12px}>
         <CardBody>
           <Form>
             {/* กรอกชื่อภาษาไทย */}

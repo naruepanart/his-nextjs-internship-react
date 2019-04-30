@@ -4,17 +4,19 @@ import classnames from 'classnames';
 import dynamic from 'next/dynamic';
 const MenuTopMain = dynamic(() => import('./MenuTopMain'), { ssr: false });
 
+const fontSize14px = {
+  fontSize: "14px",
+};
+
 export default class Navbarmain extends Component {
   constructor(props) {
     super(props);
-
-    this.toggle = this.toggle.bind(this);
     this.state = {
       activeTab: '1'
     };
   }
 
-  toggle(tab) {
+  toggle = (tab) => {
     if (this.state.activeTab !== tab) {
       this.setState({
         activeTab: tab
@@ -23,7 +25,7 @@ export default class Navbarmain extends Component {
   }
   render() {
     return (
-      <div style={{ fontSize: "14px" }}>
+      <div style={fontSize14px}>
         <Nav tabs>
           <NavItem>
             <NavLink
@@ -45,17 +47,16 @@ export default class Navbarmain extends Component {
         <TabContent activeTab={this.state.activeTab}>
           <TabPane tabId="1">
             <Row>
-              <Col sm="12">
+              <Col md="12">
                 <MenuTopMain></MenuTopMain>
               </Col>
             </Row>
           </TabPane>
           <TabPane tabId="2">
             <Row>
-              <Col sm="6">
-             <h1>Master</h1>
+              <Col md="12">
+                <h1>Master</h1>
               </Col>
-            
             </Row>
           </TabPane>
         </TabContent>

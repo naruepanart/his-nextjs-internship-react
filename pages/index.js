@@ -28,9 +28,6 @@ const Index = () => {
       </Head>
       <Navbarmain />
       <TabsMain />
-      <h1>
-        <center>Homepage</center>
-      </h1>
     </div>
   );
 };

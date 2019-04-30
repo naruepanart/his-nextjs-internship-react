@@ -16,7 +16,9 @@ const Pinformation = dynamic(() => import('./register/Pinformation'), { ssr: fal
 const Cinformation = dynamic(() => import('./register/Cinformation'), { ssr: false });
 const Binformation = dynamic(() => import('./register/Binformation'), { ssr: false });
 
-
+const fontSize14px = {
+  fontSize: "14px",
+};
 
 export default class TabInRegister extends React.Component {
   constructor(props) {
@@ -37,7 +39,7 @@ export default class TabInRegister extends React.Component {
   }
   render() {
     return (
-      <div style={{ fontSize: "14px" }}>
+      <div style={fontSize14px}>
         <Nav tabs>
           <NavItem>
             <NavLink

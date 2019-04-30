@@ -18,6 +18,13 @@ import BootstrapTable from "react-bootstrap-table-next";
 import paginationFactory from "react-bootstrap-table2-paginator";
 import ToolkitProvider, { Search } from "react-bootstrap-table2-toolkit";
 
+const fontSize18px = {
+  fontSize: "18px",
+};
+const fontSize12px = {
+  fontSize: "12px",
+};
+
 const columns1 = [
   {
     dataField: "id",
@@ -266,7 +273,7 @@ export default class Sendpatient extends Component {
             <Col md="12">
               <Card>
                 <Navbar color="primary" dark className="py-md-0">
-                  <NavbarBrand href="#" style={{ fontSize: "18px" }}>
+                  <NavbarBrand href="#" style={fontSize18px}>
                     ส่งตรวจผู้ป่วย
                   </NavbarBrand>
                 </Navbar>
@@ -298,7 +305,7 @@ export default class Sendpatient extends Component {
                   </Card>
                   <br />
 
-                  <div style={{ fontSize: "12px" }}>
+                  <div style={fontSize12px}>
                     <Card>
                       <CardBody>
                         <FormGroup>

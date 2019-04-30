@@ -18,6 +18,9 @@ import ToolkitProvider, { Search } from "react-bootstrap-table2-toolkit"
 import dynamic from 'next/dynamic';
 const MedicCare = dynamic(() => import('./MedicCare'), { ssr: false });
 
+const fontSize12px = {
+  fontSize: "12px",
+};
 
 const columns1 = [
   {
@@ -85,14 +88,18 @@ const { SearchBar } = Search
 const rows1 = [
   {
     id: 0,
-    authority: "authority",
-    tutelage: "tutelage",
-    contact: "contact",
+    authority: "hello",
+    tutelage: "hello",
+    contact: "hello",
+    hosuseclaim: "hosuseclaim",
+    numbercontact: "numbercontact",
+    start: "10",
+    end: "5",
   },
 ]
 const rows2 = [
   {
-    id: 1,
+    id: 0,
     authority: "authority",
     tutelage: "tutelage",
     contact: "contact",
@@ -187,7 +194,7 @@ class Pinformation extends React.Component {
 
   render() {
     return (
-      <div style={{ fontSize: "12px" }}>
+      <div style={fontSize12px}>
         <CardBody>
           <Form>
             {/* ข้อมูลสิทธิรักษา */}
@@ -229,7 +236,7 @@ class Pinformation extends React.Component {
                         isOpen={this.state.modal}
                         toggle={this.toggle}
                         className={this.props.className}
-                        bsSize="lg"
+                        size="lg"
                       >
                         <ModalHeader> สิทธิรักษาพยาบาล </ModalHeader>
                         <ModalBody>

@@ -13,6 +13,10 @@ import BootstrapTable from "react-bootstrap-table-next"
 import paginationFactory from "react-bootstrap-table2-paginator"
 import ToolkitProvider, { Search } from "react-bootstrap-table2-toolkit"
 
+const fontSize12px = {
+  fontSize: "12px",
+};
+
 const columns1 = [
   {
     dataField: "id",
@@ -105,7 +109,7 @@ class Cinformation extends React.Component {
   }
   render() {
     return (
-      <div style={{ fontSize: "12px" }}>
+      <div style={fontSize12px}>
         {/* เปลี่ยนชื่อ-สกุล */}
         <CardBody>
           <Card>
