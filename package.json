@@ -12,17 +12,20 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@opuscapita/react-splitpane": "^1.0.3",
+    "@zeit/next-css": "^1.0.1",
     "availity-reactstrap-validation": "^2.5.2",
     "axios": "^0.18.0",
     "next": "^8.1.0",
+    "next-compose-plugins": "^2.2.0",
     "next-images": "^1.1.1",
     "react": "^16.8.6",
     "react-bootstrap-table-next": "^3.1.1",
+    "react-bootstrap-table2-editor": "^1.2.3",
     "react-bootstrap-table2-paginator": "^2.0.6",
     "react-bootstrap-table2-toolkit": "^1.4.1",
     "react-dom": "^16.8.6",
     "react-scroll-up-button": "^1.6.4",
+    "react-splitter-layout": "^4.0.0",
     "reactstrap": "^8.0.0"
   }
 }

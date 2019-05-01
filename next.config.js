@@ -1,6 +1,8 @@
+const withPlugins = require('next-compose-plugins');
 const withImages = require('next-images')
-module.exports = withImages({
-  webpack(config, options) {
-    return config
-  }
-})
+const withCSS = require('@zeit/next-css')
+
+module.exports = withPlugins([
+  [withImages],
+  [withCSS],
+]);
