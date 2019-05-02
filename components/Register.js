@@ -17,9 +17,10 @@ import {
 import { VerticleButton as ScrollUpButton } from "react-scroll-up-button";
 import picture from "./static/picture.jpg";
 import TabInRegister from "./TabInRegister";
+import CameraGG from "./CameraGG";
 
 const fontSize18px = {
-  fontSize: "18px",
+  fontSize: "18px"
 };
 
 export default class Register extends Component {
@@ -131,11 +132,10 @@ export default class Register extends Component {
                                           size="lg"
                                         >
                                           <ModalHeader>
-                                            {" "}
-                                            Picture Capture{" "}
+                                            Picture Capture
                                           </ModalHeader>
                                           <ModalBody>
-                                            <h1>รอ Component</h1>
+                                            <CameraGG />
                                           </ModalBody>
                                           <ModalFooter>
                                             <Button
@@ -143,8 +143,7 @@ export default class Register extends Component {
                                               size="sm"
                                               onClick={this.toggle}
                                             >
-                                              {" "}
-                                              OK{" "}
+                                              OK
                                             </Button>
                                           </ModalFooter>
                                         </Modal>

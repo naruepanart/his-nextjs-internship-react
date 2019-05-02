@@ -24,13 +24,13 @@ export default class TabInRegister extends React.Component {
   constructor(props) {
     super(props);
 
-    this.toggle = this.toggle.bind(this);
+
     this.state = {
       activeTab: "1"
     };
   }
 
-  toggle(tab) {
+  toggletab = (tab) => {
     if (this.state.activeTab !== tab) {
       this.setState({
         activeTab: tab
@@ -45,7 +45,7 @@ export default class TabInRegister extends React.Component {
             <NavLink
               className={classnames({ active: this.state.activeTab === "1" })}
               onClick={() => {
-                this.toggle("1");
+                this.toggletab("1");
               }}
             >
               ข้อมูลทั่วไป
@@ -55,7 +55,7 @@ export default class TabInRegister extends React.Component {
             <NavLink
               className={classnames({ active: this.state.activeTab === "2" })}
               onClick={() => {
-                this.toggle("2");
+                this.toggletab("2");
               }}
             >
               ข้อมูลที่อยู่
@@ -65,7 +65,7 @@ export default class TabInRegister extends React.Component {
             <NavLink
               className={classnames({ active: this.state.activeTab === "3" })}
               onClick={() => {
-                this.toggle("3");
+                this.toggletab("3");
               }}
             >
               ข้อมูลสิทธิรักษา
@@ -75,7 +75,7 @@ export default class TabInRegister extends React.Component {
             <NavLink
               className={classnames({ active: this.state.activeTab === "4" })}
               onClick={() => {
-                this.toggle("4");
+                this.toggletab("4");
               }}
             >
               ข้อมูลการเปลี่ยนชื่อ-สกุล
@@ -85,7 +85,7 @@ export default class TabInRegister extends React.Component {
             <NavLink
               className={classnames({ active: this.state.activeTab === "5" })}
               onClick={() => {
-                this.toggle("5");
+                this.toggletab("5");
               }}
             >
               สังกัดหน่วยงานและสวัสดิการ
