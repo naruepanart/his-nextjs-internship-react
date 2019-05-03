@@ -15,11 +15,9 @@ See : http://localhost:3000
 
 ```
 
-==================================================
-
 ## Roadmap code
 
-## การ setState
+### การ setState
 
 ```
 this.setState(prevState => ({
@@ -33,7 +31,7 @@ toggleModal = () => {
   }
 ```
 
-## การส่งข้อมูล
+### การส่งข้อมูล
 
 ```
 export default class HelloWorld extends Component {
@@ -55,7 +53,7 @@ export default class HelloWorld extends Component {
 }
 ```
 
-## การส่งข้อมูลข้าม components
+### การส่งข้อมูลข้าม components
 
 ```
 import React, { Component } from "react";
@@ -106,7 +104,7 @@ const About = props => {
 export default About;
 ```
 
-## การ post data
+### การ post data
 
 ```
 import React from "react"
@@ -157,7 +155,7 @@ export default class PersonList extends React.Component {
 
 ```
 
-## การ get data with axios tool
+### การ get data with axios tool
 
 ```
 async componentDidMount() {
