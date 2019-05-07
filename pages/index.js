@@ -1,10 +1,10 @@
 import React from "react";
 import Head from "next/head";
 import dynamic from "next/dynamic";
-const Navbarmain = dynamic(() => import("../components/Navbarmain"), {
+const Navbarmain = dynamic(() => import("../components/home/Navbarmain"), {
   ssr: false
 });
-const TabsMain = dynamic(() => import("../components/TabsMain"), {
+const TabsMain = dynamic(() => import("../components/home/TabsMain"), {
   ssr: false
 });
 

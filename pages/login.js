@@ -1,7 +1,7 @@
 import React from "react";
 import dynamic from "next/dynamic";
 import Head from "next/head";
-const Login = dynamic(() => import("../components/Login"), { ssr: false });
+const Login = dynamic(() => import("../components/login/Login"), { ssr: false });
 
 const login = () => {
   return (
