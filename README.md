@@ -6,14 +6,14 @@
 npm i && npm run dev
 ```
 
-See : http://localhost:3000
+## Todo list
 
-```
-[JavaScript for React Developers](https://www.youtube.com/watch?v=NCwa_xi0Uuc)
+- add pagination below table (right) // เพิ่ม pagination ที่ใต้ตาราง
+- edit name,state (variable) in Tabs1Main.js// แก้ไขชื่อตัวแปรใน Tab1Main.js
+- add can edit after add data to table // เพิ่ม ลบ แก้ไข ข้อมูล
+- add edit date input (fix) // แก้วันที่ input
+- scroll ตารางแนวนอน
 
-[วิธีทำให้ Code ของคุณง่ายขึ้นด้วย map(), reduce() และ filter() ใน JavaScript](https://www.techstarthailand.com/blog/detail/How-to-simplify-your-codebase-with-map-reduce-and-filter-in-JavaScript/837?fbclid=IwAR0hzyfn5EeCwSgKjL2mqvVr4O-01R471y4suj0b25TGZOBVhr2me_esSdU)
-
-```
 
 ## Roadmap code
 
