@@ -239,6 +239,9 @@ export default class tabletest extends Component {
 ```
 
 ## React Hooks
+
+### State
+
 ```
 import React, { useState } from 'react';
 
@@ -257,4 +260,36 @@ const ReactHooks = () => {
 }
 
 export default ReactHooks
+```
+
+### Fetch API
+
+```
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+
+const ReactHooks = () => {
+    const [data, setData] = useState([]);
+
+    useEffect(() => {
+        axios.get("https://jsonplaceholder.typicode.com/users")
+            .then(result => setData(result.data));
+    }, []);
+
+    return (
+        <div>
+            <ul>
+                {data.map(item => (
+                    <li key={item.id}>
+                        {item.email}
+                    </li>
+                ))}
+            </ul>
+        </div>
+    );
+
+}
+
+export default ReactHooks
+
 ```
