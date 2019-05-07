@@ -242,27 +242,19 @@ export default class tabletest extends Component {
 ```
 import React, { useState } from 'react';
 
-const test = () => {
+const ReactHooks = () => {
     const [count, setCount] = useState(0);
-    const [name , setName] = useState('NO');
+    const [name, setName] = useState('nosetName');
 
     return (
         <div>
             <p>Count {count} </p>
-            <button onClick={() => setCount(count + 1)}>
-                Click me
-      </button>
-
-      <hr></hr>
-      
+            <button onClick={() => setCount(count + 1)}>Click setCount</button>
             <p>Name {name} </p>
-            <button onClick={() => setName('BENZ')}>
-                Click me
-      </button>
+            <button onClick={() => setName('BENZ')}>Click setName</button>
         </div>
     )
 }
 
-export default test
-
+export default ReactHooks
 ```
