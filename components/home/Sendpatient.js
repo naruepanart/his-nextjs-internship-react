@@ -488,7 +488,7 @@ export default class Sendpatient extends Component {
                                                     >
                                                         <i className="fas fa-user-plus" />{" "}
                                                         ทะเบียนผู้ป่วยใหม่
-                                                    </Button>{" "}
+                                                    </Button>
                                                     <Button
                                                         color="danger"
                                                         onClick={

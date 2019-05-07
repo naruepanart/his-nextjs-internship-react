@@ -1,4 +1,4 @@
-import React from "react"
+import React, { Component } from "react"
 import {
     Row,
     Col,
@@ -101,11 +101,12 @@ const options1 = {
     ],
 }
 
-class Ginformation extends React.Component {
+class Ginformation extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            disabled: false,
+            checkboxVIP: false,
+            checkboxSpecialcare: false,
         }
 
         this.state = {
@@ -140,7 +141,7 @@ class Ginformation extends React.Component {
             WorkPhone: "", //เบอร์ที่ทำงาน
             Email: "", //email
             Line: "", //line
-            IsVIP: "", ///ผ้ป่วย VIP
+            IsVIP: "", ///ผู้ป่วย VIP
             InCups: "", //** */
             IsAnonymous: "", //ไม่ระบุตัวตน
             Cardselect: "", //ประเภทบัตร
@@ -149,6 +150,19 @@ class Ginformation extends React.Component {
             cardexpire: "", //วันที่สิ้นสุด
         }
     }
+
+    checkboxVIP = () => {
+        this.setState({
+            checkboxVIP: !this.state.checkboxVIP,
+        })
+    }
+
+    checkboxSpecialcare = () => {
+        this.setState({
+            checkboxSpecialcare: !this.state.checkboxSpecialcare,
+        })
+    }
+
     render() {
         return (
             <div style={fontSize12px}>
@@ -299,24 +313,20 @@ class Ginformation extends React.Component {
                                     </FormGroup>
                                 </Col>
                                 <Col md="3">
-                                    <FormGroup>
-                                        <Label>วันที่เริ่ม</Label>
-                                        <Input
-                                            type="date"
-                                            name="NIDStartDttm"
-                                            bsSize="sm"
-                                        />
-                                    </FormGroup>
+                                    <Label>วันที่เริ่ม</Label>
+                                    <Input
+                                        type="date"
+                                        name="NIDStartDttm"
+                                        bsSize="sm"
+                                    />
                                 </Col>
                                 <Col md="3">
-                                    <FormGroup>
-                                        <Label>วันที่สิ้นสุด</Label>
-                                        <Input
-                                            type="date"
-                                            name="NIDEndDttm"
-                                            bsSize="sm"
-                                        />
-                                    </FormGroup>
+                                    <Label>วันที่สิ้นสุด</Label>
+                                    <Input
+                                        type="date"
+                                        name="NIDEndDttm"
+                                        bsSize="sm"
+                                    />
                                 </Col>
                                 <Col md="2">
                                     <br />
@@ -346,14 +356,12 @@ class Ginformation extends React.Component {
                                     </FormGroup>
                                 </Col>
                                 <Col md="2">
-                                    <FormGroup>
-                                        <Label>อายุ</Label>
-                                        <Input
-                                            type="number"
-                                            name="Age"
-                                            bsSize="sm"
-                                        />
-                                    </FormGroup>
+                                    <Label>อายุ</Label>
+                                    <Input
+                                        type="number"
+                                        name="Age"
+                                        bsSize="sm"
+                                    />
                                 </Col>
                                 <Col md="2">
                                     <Label for="exampleSelect">เพศ</Label>
@@ -390,39 +398,45 @@ class Ginformation extends React.Component {
 
                             <Row>
                                 <Col md="6">
-                                    <Label for="exampleSelect">อาชีพ</Label>
-                                    <Input
-                                        type="select"
-                                        name="select"
-                                        bsSize="sm"
-                                        required
-                                    >
-                                        <option>select..</option>
-                                        <option>1</option>
-                                        <option>2</option>
-                                        <option>3</option>
-                                        <option>4</option>
-                                        <option>5</option>
-                                    </Input>
+                                    <FormGroup>
+                                        <Label for="exampleSelect">อาชีพ</Label>
+                                        <Input
+                                            type="select"
+                                            name="select"
+                                            bsSize="sm"
+                                            required
+                                        >
+                                            <option>select..</option>
+                                            <option>1</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                            <option>4</option>
+                                            <option>5</option>
+                                        </Input>
+                                    </FormGroup>
                                 </Col>
                             </Row>
 
                             <Row>
                                 <Col md="4">
-                                    <Label for="exampleSelect">สัญชาติ</Label>
-                                    <Input
-                                        type="select"
-                                        name="select"
-                                        bsSize="sm"
-                                        required
-                                    >
-                                        <option>select..</option>
-                                        <option>1</option>
-                                        <option>2</option>
-                                        <option>3</option>
-                                        <option>4</option>
-                                        <option>5</option>
-                                    </Input>
+                                    <FormGroup>
+                                        <Label for="exampleSelect">
+                                            สัญชาติ
+                                        </Label>
+                                        <Input
+                                            type="select"
+                                            name="select"
+                                            bsSize="sm"
+                                            required
+                                        >
+                                            <option>select..</option>
+                                            <option>1</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                            <option>4</option>
+                                            <option>5</option>
+                                        </Input>
+                                    </FormGroup>
                                 </Col>
                                 <Col md="4">
                                     <Label for="exampleSelect">เชื้อชาติ</Label>
@@ -460,20 +474,24 @@ class Ginformation extends React.Component {
 
                             <Row>
                                 <Col md="3">
-                                    <Label for="exampleSelect">หมู่เลือด</Label>
-                                    <Input
-                                        type="select"
-                                        name="select"
-                                        bsSize="sm"
-                                        required
-                                    >
-                                        <option>select..</option>
-                                        <option>1</option>
-                                        <option>2</option>
-                                        <option>3</option>
-                                        <option>4</option>
-                                        <option>5</option>
-                                    </Input>
+                                    <FormGroup>
+                                        <Label for="exampleSelect">
+                                            หมู่เลือด
+                                        </Label>
+                                        <Input
+                                            type="select"
+                                            name="select"
+                                            bsSize="sm"
+                                            required
+                                        >
+                                            <option>select..</option>
+                                            <option>1</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                            <option>4</option>
+                                            <option>5</option>
+                                        </Input>
+                                    </FormGroup>
                                 </Col>
                                 <Col md="2">
                                     <Label for="exampleSelect">RH</Label>
@@ -504,44 +522,36 @@ class Ginformation extends React.Component {
                                     </FormGroup>
                                 </Col>
                                 <Col md="2">
-                                    <FormGroup>
-                                        <Label>เบอร์โทร 2</Label>
-                                        <Input
-                                            type="number"
-                                            name="PhoneNumber2"
-                                            bsSize="sm"
-                                        />
-                                    </FormGroup>
+                                    <Label>เบอร์โทร 2</Label>
+                                    <Input
+                                        type="number"
+                                        name="PhoneNumber2"
+                                        bsSize="sm"
+                                    />
                                 </Col>
                                 <Col md="2">
-                                    <FormGroup>
-                                        <Label>เบอร์โทร 2</Label>
-                                        <Input
-                                            type="number"
-                                            name="PhoneNumber3"
-                                            bsSize="sm"
-                                        />
-                                    </FormGroup>
+                                    <Label>เบอร์โทร 2</Label>
+                                    <Input
+                                        type="number"
+                                        name="PhoneNumber3"
+                                        bsSize="sm"
+                                    />
                                 </Col>
                                 <Col md="2">
-                                    <FormGroup>
-                                        <Label>เบอร์บ้าน</Label>
-                                        <Input
-                                            type="number"
-                                            name="HomePhone"
-                                            bsSize="sm"
-                                        />
-                                    </FormGroup>
+                                    <Label>เบอร์บ้าน</Label>
+                                    <Input
+                                        type="number"
+                                        name="HomePhone"
+                                        bsSize="sm"
+                                    />
                                 </Col>
                                 <Col md="2">
-                                    <FormGroup>
-                                        <Label>เบอร์ที่ทำงาน</Label>
-                                        <Input
-                                            type="number"
-                                            name="WorkPhone"
-                                            bsSize="sm"
-                                        />
-                                    </FormGroup>
+                                    <Label>เบอร์ที่ทำงาน</Label>
+                                    <Input
+                                        type="number"
+                                        name="WorkPhone"
+                                        bsSize="sm"
+                                    />
                                 </Col>
                             </Row>
 
@@ -557,14 +567,12 @@ class Ginformation extends React.Component {
                                     </FormGroup>
                                 </Col>
                                 <Col md="6">
-                                    <FormGroup>
-                                        <Label>ID Line</Label>
-                                        <Input
-                                            type="text"
-                                            name="Line"
-                                            bsSize="sm"
-                                        />
-                                    </FormGroup>
+                                    <Label>ID Line</Label>
+                                    <Input
+                                        type="text"
+                                        name="Line"
+                                        bsSize="sm"
+                                    />
                                 </Col>
                             </Row>
                         </CardBody>
@@ -574,42 +582,60 @@ class Ginformation extends React.Component {
                     <Card>
                         <CardBody>
                             <Row>
-                                <FormGroup check inline>
+                                <Col md="4">
                                     <Label> ประเภทผู้ป่วย </Label>
-                                </FormGroup>
-                                <FormGroup check inline>
-                                    <Label check>
-                                        <Input type="checkbox" /> VIP
-                                    </Label>
-                                </FormGroup>
-                                <FormGroup check inline>
-                                    <Label>
-                                        <Input
-                                            type="text"
-                                            disabled
-                                            bsSize="sm"
-                                        />
-                                    </Label>
-                                </FormGroup>
-                                <FormGroup check inline>
-                                    <Label check>
-                                        <Input type="checkbox" /> Special Care
-                                    </Label>
-                                </FormGroup>
-                                <FormGroup check inline>
-                                    <Label>
-                                        <Input
-                                            type="text"
-                                            disabled
-                                            bsSize="sm"
-                                        />
-                                    </Label>
-                                </FormGroup>
-                                <FormGroup check inline>
-                                    <Label check>
-                                        <Input type="checkbox" /> Anonymous
-                                    </Label>
-                                </FormGroup>
+                                    <Col md="10">
+                                        <FormGroup check>
+                                            <Input
+                                                type="checkbox"
+                                                name="checkboxVIP"
+                                                value="checkboxVIP"
+                                                onClick={this.checkboxVIP}
+                                            />
+
+                                            <Input
+                                                name="checkboxVIP"
+                                                bsSize="sm"
+                                                placeholder="VIP"
+                                                disabled={
+                                                    this.state.checkboxVIP
+                                                        ? ""
+                                                        : "disabled"
+                                                }
+                                            />
+                                        </FormGroup>
+                                        <br />
+                                        <FormGroup check>
+                                            <Input
+                                                type="checkbox"
+                                                name="checkboxSpecialcare"
+                                                value="checkboxSpecialcare"
+                                                onClick={
+                                                    this.checkboxSpecialcare
+                                                }
+                                            />
+
+                                            <Input
+                                                name="checkboxSpecialcare"
+                                                bsSize="sm"
+                                                placeholder="Special Care"
+                                                disabled={
+                                                    this.state
+                                                        .checkboxSpecialcare
+                                                        ? ""
+                                                        : "disabled"
+                                                }
+                                            />
+                                        </FormGroup>
+                                        <br />
+                                        <FormGroup check>
+                                            <Label>
+                                                <Input type="checkbox" />{" "}
+                                                Anonymous
+                                            </Label>
+                                        </FormGroup>
+                                    </Col>
+                                </Col>
                             </Row>
                         </CardBody>
                     </Card>

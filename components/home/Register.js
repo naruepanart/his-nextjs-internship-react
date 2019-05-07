@@ -87,7 +87,6 @@ export default class Register extends Component {
                                     </NavbarBrand>
                                 </Navbar>
                                 <CardBody>
-                                    {/* ค้นหา */}
                                     <Card>
                                         <CardBody>
                                             <Form>
