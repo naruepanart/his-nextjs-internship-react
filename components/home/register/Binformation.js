@@ -1,4 +1,4 @@
-import React from "react"
+import React, { PureComponent } from "react"
 import {
     Row,
     Col,
@@ -95,7 +95,7 @@ const options1 = {
     ],
 }
 
-class Binformation extends React.Component {
+class Binformation extends PureComponent {
     constructor(props) {
         super(props)
         this.state = {

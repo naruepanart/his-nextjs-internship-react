@@ -1,4 +1,4 @@
-import React, { Component } from "react"
+import React, { PureComponent } from "react"
 import {
     Row,
     Col,
@@ -101,7 +101,7 @@ const options1 = {
     ],
 }
 
-class Ginformation extends Component {
+class Ginformation extends PureComponent {
     constructor(props) {
         super(props)
         this.state = {
@@ -227,10 +227,10 @@ class Ginformation extends Component {
                                 </Row>
                             </CardBody>
                         </Card>
-                    </Form>
+                        <br></br>
 
-                    {/* กรอกชื่อภาษาอังกฤษ */}
-                    <form>
+                        {/* กรอกชื่อภาษาอังกฤษ */}
+
                         <Card>
                             <CardBody>
                                 <Row>
@@ -294,457 +294,461 @@ class Ginformation extends Component {
                                 </Row>
                             </CardBody>
                         </Card>
-                    </form>
 
-                    {/* กรอกข้อมูลทั่วไป */}
-                    <Card>
-                        <CardBody>
-                            <Row>
-                                <Col md="4">
-                                    <FormGroup>
-                                        <Label>เลขบัตรประชาชน</Label>
-                                        <Input
-                                            type="number"
-                                            name="NationalID"
-                                            bsSize="sm"
-                                            max="13"
-                                            required
-                                        />
-                                    </FormGroup>
-                                </Col>
-                                <Col md="3">
-                                    <Label>วันที่เริ่ม</Label>
-                                    <Input
-                                        type="date"
-                                        name="NIDStartDttm"
-                                        bsSize="sm"
-                                    />
-                                </Col>
-                                <Col md="3">
-                                    <Label>วันที่สิ้นสุด</Label>
-                                    <Input
-                                        type="date"
-                                        name="NIDEndDttm"
-                                        bsSize="sm"
-                                    />
-                                </Col>
-                                <Col md="2">
-                                    <br />
-                                    <FormGroup check>
-                                        <Label check>
-                                            {" "}
-                                            <br />
+
+                        <br></br>
+
+                        {/* กรอกข้อมูลทั่วไป */}
+                        <Card>
+                            <CardBody>
+                                <Row>
+                                    <Col md="4">
+                                        <FormGroup>
+                                            <Label>เลขบัตรประชาชน</Label>
                                             <Input
-                                                type="checkbox"
-                                                name="Institution"
-                                            />
-                                            หน่วยงาน
-                                        </Label>
-                                    </FormGroup>
-                                </Col>
-                            </Row>
-                            <Row>
-                                <Col md="3">
-                                    <FormGroup>
-                                        <Label>วัน/เดือน/ปี เกิด</Label>
-                                        <Input
-                                            type="date"
-                                            name="Birthdate"
-                                            bsSize="sm"
-                                            required
-                                        />
-                                    </FormGroup>
-                                </Col>
-                                <Col md="2">
-                                    <Label>อายุ</Label>
-                                    <Input
-                                        type="number"
-                                        name="Age"
-                                        bsSize="sm"
-                                    />
-                                </Col>
-                                <Col md="2">
-                                    <Label for="exampleSelect">เพศ</Label>
-                                    <Input
-                                        type="select"
-                                        name="select"
-                                        bsSize="sm"
-                                    >
-                                        <option>select..</option>
-                                        <option>1</option>
-                                        <option>2</option>
-                                        <option>3</option>
-                                        <option>4</option>
-                                        <option>5</option>
-                                    </Input>
-                                </Col>
-                                <Col md="4">
-                                    <Label for="exampleSelect">สภาพสมรส</Label>
-                                    <Input
-                                        type="select"
-                                        name="select"
-                                        bsSize="sm"
-                                        required
-                                    >
-                                        <option>select..</option>
-                                        <option>1</option>
-                                        <option>2</option>
-                                        <option>3</option>
-                                        <option>4</option>
-                                        <option>5</option>
-                                    </Input>
-                                </Col>
-                            </Row>
-
-                            <Row>
-                                <Col md="6">
-                                    <FormGroup>
-                                        <Label for="exampleSelect">อาชีพ</Label>
-                                        <Input
-                                            type="select"
-                                            name="select"
-                                            bsSize="sm"
-                                            required
-                                        >
-                                            <option>select..</option>
-                                            <option>1</option>
-                                            <option>2</option>
-                                            <option>3</option>
-                                            <option>4</option>
-                                            <option>5</option>
-                                        </Input>
-                                    </FormGroup>
-                                </Col>
-                            </Row>
-
-                            <Row>
-                                <Col md="4">
-                                    <FormGroup>
-                                        <Label for="exampleSelect">
-                                            สัญชาติ
-                                        </Label>
-                                        <Input
-                                            type="select"
-                                            name="select"
-                                            bsSize="sm"
-                                            required
-                                        >
-                                            <option>select..</option>
-                                            <option>1</option>
-                                            <option>2</option>
-                                            <option>3</option>
-                                            <option>4</option>
-                                            <option>5</option>
-                                        </Input>
-                                    </FormGroup>
-                                </Col>
-                                <Col md="4">
-                                    <Label for="exampleSelect">เชื้อชาติ</Label>
-                                    <Input
-                                        type="select"
-                                        name="select"
-                                        bsSize="sm"
-                                        required
-                                    >
-                                        <option>select..</option>
-                                        <option>1</option>
-                                        <option>2</option>
-                                        <option>3</option>
-                                        <option>4</option>
-                                        <option>5</option>
-                                    </Input>
-                                </Col>
-                                <Col md="4">
-                                    <Label for="exampleSelect">ศาสนา</Label>
-                                    <Input
-                                        type="select"
-                                        name="select"
-                                        bsSize="sm"
-                                        required
-                                    >
-                                        <option>select..</option>
-                                        <option>1</option>
-                                        <option>2</option>
-                                        <option>3</option>
-                                        <option>4</option>
-                                        <option>5</option>
-                                    </Input>
-                                </Col>
-                            </Row>
-
-                            <Row>
-                                <Col md="3">
-                                    <FormGroup>
-                                        <Label for="exampleSelect">
-                                            หมู่เลือด
-                                        </Label>
-                                        <Input
-                                            type="select"
-                                            name="select"
-                                            bsSize="sm"
-                                            required
-                                        >
-                                            <option>select..</option>
-                                            <option>1</option>
-                                            <option>2</option>
-                                            <option>3</option>
-                                            <option>4</option>
-                                            <option>5</option>
-                                        </Input>
-                                    </FormGroup>
-                                </Col>
-                                <Col md="2">
-                                    <Label for="exampleSelect">RH</Label>
-                                    <Input
-                                        type="select"
-                                        name="select"
-                                        bsSize="sm"
-                                    >
-                                        <option>select..</option>
-                                        <option>1</option>
-                                        <option>2</option>
-                                        <option>3</option>
-                                        <option>4</option>
-                                        <option>5</option>
-                                    </Input>
-                                </Col>
-                            </Row>
-
-                            <Row>
-                                <Col md="2">
-                                    <FormGroup>
-                                        <Label>เบอร์โทร 1</Label>
-                                        <Input
-                                            type="number"
-                                            name="PhoneNumber"
-                                            bsSize="sm"
-                                        />
-                                    </FormGroup>
-                                </Col>
-                                <Col md="2">
-                                    <Label>เบอร์โทร 2</Label>
-                                    <Input
-                                        type="number"
-                                        name="PhoneNumber2"
-                                        bsSize="sm"
-                                    />
-                                </Col>
-                                <Col md="2">
-                                    <Label>เบอร์โทร 2</Label>
-                                    <Input
-                                        type="number"
-                                        name="PhoneNumber3"
-                                        bsSize="sm"
-                                    />
-                                </Col>
-                                <Col md="2">
-                                    <Label>เบอร์บ้าน</Label>
-                                    <Input
-                                        type="number"
-                                        name="HomePhone"
-                                        bsSize="sm"
-                                    />
-                                </Col>
-                                <Col md="2">
-                                    <Label>เบอร์ที่ทำงาน</Label>
-                                    <Input
-                                        type="number"
-                                        name="WorkPhone"
-                                        bsSize="sm"
-                                    />
-                                </Col>
-                            </Row>
-
-                            <Row>
-                                <Col md="6">
-                                    <FormGroup>
-                                        <Label> E-mail</Label>
-                                        <Input
-                                            type="email"
-                                            name="Email"
-                                            bsSize="sm"
-                                        />
-                                    </FormGroup>
-                                </Col>
-                                <Col md="6">
-                                    <Label>ID Line</Label>
-                                    <Input
-                                        type="text"
-                                        name="Line"
-                                        bsSize="sm"
-                                    />
-                                </Col>
-                            </Row>
-                        </CardBody>
-                    </Card>
-
-                    {/* ประเภทผู้ป่วย */}
-                    <Card>
-                        <CardBody>
-                            <Row>
-                                <Col md="4">
-                                    <Label> ประเภทผู้ป่วย </Label>
-                                    <Col md="10">
-                                        <FormGroup check>
-                                            <Input
-                                                type="checkbox"
-                                                name="checkboxVIP"
-                                                value="checkboxVIP"
-                                                onClick={this.checkboxVIP}
-                                            />
-
-                                            <Input
-                                                name="checkboxVIP"
+                                                type="number"
+                                                name="NationalID"
                                                 bsSize="sm"
-                                                placeholder="VIP"
-                                                disabled={
-                                                    this.state.checkboxVIP
-                                                        ? ""
-                                                        : "disabled"
-                                                }
+                                                max="13"
+                                                required
                                             />
-                                        </FormGroup>
-                                        <br />
-                                        <FormGroup check>
-                                            <Input
-                                                type="checkbox"
-                                                name="checkboxSpecialcare"
-                                                value="checkboxSpecialcare"
-                                                onClick={
-                                                    this.checkboxSpecialcare
-                                                }
-                                            />
-
-                                            <Input
-                                                name="checkboxSpecialcare"
-                                                bsSize="sm"
-                                                placeholder="Special Care"
-                                                disabled={
-                                                    this.state
-                                                        .checkboxSpecialcare
-                                                        ? ""
-                                                        : "disabled"
-                                                }
-                                            />
-                                        </FormGroup>
-                                        <br />
-                                        <FormGroup check>
-                                            <Label>
-                                                <Input type="checkbox" />{" "}
-                                                Anonymous
-                                            </Label>
                                         </FormGroup>
                                     </Col>
-                                </Col>
-                            </Row>
-                        </CardBody>
-                    </Card>
-                    <br />
-                    {/* ข้อมูลบัตรอื่นๆ */}
-                    <Card>
-                        <CardHeader body="true" className="text-left">
-                            <h5> ข้อมูลบัตรอื่นๆ </h5>
-                        </CardHeader>
-                        <CardBody>
-                            <Row>
-                                <Col md="4">
-                                    <Label for="exampleSelect">
-                                        ประเภทบัตร
-                                    </Label>
-                                    <Input
-                                        type="select"
-                                        name="select"
-                                        bsSize="sm"
-                                    >
-                                        <option>select..</option>
-                                        <option>1</option>
-                                        <option>2</option>
-                                        <option>3</option>
-                                        <option>4</option>
-                                        <option>5</option>
-                                    </Input>
-                                </Col>
-                                <Col md="4">
-                                    <FormGroup>
-                                        <Label>เลขที่บัตร</Label>
-                                        <Input
-                                            type="text"
-                                            name="cardid"
-                                            bsSize="sm"
-                                        />
-                                    </FormGroup>
-                                </Col>
-                            </Row>
-
-                            <Row>
-                                <Col md="4">
-                                    <FormGroup>
-                                        <Label> วันที่เริ่ม</Label>
+                                    <Col md="3">
+                                        <Label>วันที่เริ่ม</Label>
                                         <Input
                                             type="date"
-                                            name="cardstart"
+                                            name="NIDStartDttm"
                                             bsSize="sm"
                                         />
-                                    </FormGroup>
-                                </Col>
-                                <Col md="4">
-                                    <FormGroup>
+                                    </Col>
+                                    <Col md="3">
                                         <Label>วันที่สิ้นสุด</Label>
                                         <Input
                                             type="date"
-                                            name="cardexpire"
+                                            name="NIDEndDttm"
                                             bsSize="sm"
                                         />
-                                    </FormGroup>
-                                </Col>
-                            </Row>
-                            <Row>
-                                <Col />
-                                <Col />
-                                <Button size="sm" color="success">
-                                    <i className="fas fa-plus" /> เพิ่ม
+                                    </Col>
+                                    <Col md="2">
+                                        <br />
+                                        <FormGroup check>
+                                            <Label check>
+                                                {" "}
+                                                <br />
+                                                <Input
+                                                    type="checkbox"
+                                                    name="Institution"
+                                                />
+                                                หน่วยงาน
+                                        </Label>
+                                        </FormGroup>
+                                    </Col>
+                                </Row>
+                                <Row>
+                                    <Col md="3">
+                                        <FormGroup>
+                                            <Label>วัน/เดือน/ปี เกิด</Label>
+                                            <Input
+                                                type="date"
+                                                name="Birthdate"
+                                                bsSize="sm"
+                                                required
+                                            />
+                                        </FormGroup>
+                                    </Col>
+                                    <Col md="2">
+                                        <Label>อายุ</Label>
+                                        <Input
+                                            type="number"
+                                            name="Age"
+                                            bsSize="sm"
+                                        />
+                                    </Col>
+                                    <Col md="2">
+                                        <Label for="exampleSelect">เพศ</Label>
+                                        <Input
+                                            type="select"
+                                            name="select"
+                                            bsSize="sm"
+                                        >
+                                            <option>select..</option>
+                                            <option>1</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                            <option>4</option>
+                                            <option>5</option>
+                                        </Input>
+                                    </Col>
+                                    <Col md="4">
+                                        <Label for="exampleSelect">สภาพสมรส</Label>
+                                        <Input
+                                            type="select"
+                                            name="select"
+                                            bsSize="sm"
+                                            required
+                                        >
+                                            <option>select..</option>
+                                            <option>1</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                            <option>4</option>
+                                            <option>5</option>
+                                        </Input>
+                                    </Col>
+                                </Row>
+
+                                <Row>
+                                    <Col md="6">
+                                        <FormGroup>
+                                            <Label for="exampleSelect">อาชีพ</Label>
+                                            <Input
+                                                type="select"
+                                                name="select"
+                                                bsSize="sm"
+                                                required
+                                            >
+                                                <option>select..</option>
+                                                <option>1</option>
+                                                <option>2</option>
+                                                <option>3</option>
+                                                <option>4</option>
+                                                <option>5</option>
+                                            </Input>
+                                        </FormGroup>
+                                    </Col>
+                                </Row>
+
+                                <Row>
+                                    <Col md="4">
+                                        <FormGroup>
+                                            <Label for="exampleSelect">
+                                                สัญชาติ
+                                        </Label>
+                                            <Input
+                                                type="select"
+                                                name="select"
+                                                bsSize="sm"
+                                                required
+                                            >
+                                                <option>select..</option>
+                                                <option>1</option>
+                                                <option>2</option>
+                                                <option>3</option>
+                                                <option>4</option>
+                                                <option>5</option>
+                                            </Input>
+                                        </FormGroup>
+                                    </Col>
+                                    <Col md="4">
+                                        <Label for="exampleSelect">เชื้อชาติ</Label>
+                                        <Input
+                                            type="select"
+                                            name="select"
+                                            bsSize="sm"
+                                            required
+                                        >
+                                            <option>select..</option>
+                                            <option>1</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                            <option>4</option>
+                                            <option>5</option>
+                                        </Input>
+                                    </Col>
+                                    <Col md="4">
+                                        <Label for="exampleSelect">ศาสนา</Label>
+                                        <Input
+                                            type="select"
+                                            name="select"
+                                            bsSize="sm"
+                                            required
+                                        >
+                                            <option>select..</option>
+                                            <option>1</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                            <option>4</option>
+                                            <option>5</option>
+                                        </Input>
+                                    </Col>
+                                </Row>
+
+                                <Row>
+                                    <Col md="3">
+                                        <FormGroup>
+                                            <Label for="exampleSelect">
+                                                หมู่เลือด
+                                        </Label>
+                                            <Input
+                                                type="select"
+                                                name="select"
+                                                bsSize="sm"
+                                                required
+                                            >
+                                                <option>select..</option>
+                                                <option>1</option>
+                                                <option>2</option>
+                                                <option>3</option>
+                                                <option>4</option>
+                                                <option>5</option>
+                                            </Input>
+                                        </FormGroup>
+                                    </Col>
+                                    <Col md="2">
+                                        <Label for="exampleSelect">RH</Label>
+                                        <Input
+                                            type="select"
+                                            name="select"
+                                            bsSize="sm"
+                                        >
+                                            <option>select..</option>
+                                            <option>1</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                            <option>4</option>
+                                            <option>5</option>
+                                        </Input>
+                                    </Col>
+                                </Row>
+
+                                <Row>
+                                    <Col md="2">
+                                        <FormGroup>
+                                            <Label>เบอร์โทร 1</Label>
+                                            <Input
+                                                type="number"
+                                                name="PhoneNumber"
+                                                bsSize="sm"
+                                            />
+                                        </FormGroup>
+                                    </Col>
+                                    <Col md="2">
+                                        <Label>เบอร์โทร 2</Label>
+                                        <Input
+                                            type="number"
+                                            name="PhoneNumber2"
+                                            bsSize="sm"
+                                        />
+                                    </Col>
+                                    <Col md="2">
+                                        <Label>เบอร์โทร 2</Label>
+                                        <Input
+                                            type="number"
+                                            name="PhoneNumber3"
+                                            bsSize="sm"
+                                        />
+                                    </Col>
+                                    <Col md="2">
+                                        <Label>เบอร์บ้าน</Label>
+                                        <Input
+                                            type="number"
+                                            name="HomePhone"
+                                            bsSize="sm"
+                                        />
+                                    </Col>
+                                    <Col md="2">
+                                        <Label>เบอร์ที่ทำงาน</Label>
+                                        <Input
+                                            type="number"
+                                            name="WorkPhone"
+                                            bsSize="sm"
+                                        />
+                                    </Col>
+                                </Row>
+
+                                <Row>
+                                    <Col md="6">
+                                        <FormGroup>
+                                            <Label> E-mail</Label>
+                                            <Input
+                                                type="email"
+                                                name="Email"
+                                                bsSize="sm"
+                                            />
+                                        </FormGroup>
+                                    </Col>
+                                    <Col md="6">
+                                        <Label>ID Line</Label>
+                                        <Input
+                                            type="text"
+                                            name="Line"
+                                            bsSize="sm"
+                                        />
+                                    </Col>
+                                </Row>
+                            </CardBody>
+                        </Card>
+
+                        <br></br>
+                        {/* ประเภทผู้ป่วย */}
+                        <Card>
+                            <CardBody>
+                                <Row>
+                                    <Col md="4">
+                                        <Label> ประเภทผู้ป่วย </Label>
+                                        <Col md="10">
+                                            <FormGroup check>
+                                                <Input
+                                                    type="checkbox"
+                                                    name="checkboxVIP"
+                                                    value="checkboxVIP"
+                                                    onClick={this.checkboxVIP}
+                                                />
+
+                                                <Input
+                                                    name="checkboxVIP"
+                                                    bsSize="sm"
+                                                    placeholder="VIP"
+                                                    disabled={
+                                                        this.state.checkboxVIP
+                                                            ? ""
+                                                            : "disabled"
+                                                    }
+                                                />
+                                            </FormGroup>
+                                            <br />
+                                            <FormGroup check>
+                                                <Input
+                                                    type="checkbox"
+                                                    name="checkboxSpecialcare"
+                                                    value="checkboxSpecialcare"
+                                                    onClick={
+                                                        this.checkboxSpecialcare
+                                                    }
+                                                />
+
+                                                <Input
+                                                    name="checkboxSpecialcare"
+                                                    bsSize="sm"
+                                                    placeholder="Special Care"
+                                                    disabled={
+                                                        this.state
+                                                            .checkboxSpecialcare
+                                                            ? ""
+                                                            : "disabled"
+                                                    }
+                                                />
+                                            </FormGroup>
+                                            <br />
+                                            <FormGroup check>
+                                                <Label>
+                                                    <Input type="checkbox" />{" "}
+                                                    Anonymous
+                                            </Label>
+                                            </FormGroup>
+                                        </Col>
+                                    </Col>
+                                </Row>
+                            </CardBody>
+                        </Card>
+                        <br />
+                        {/* ข้อมูลบัตรอื่นๆ */}
+                        <Card>
+                            <CardHeader body="true" className="text-left">
+                                <h5> ข้อมูลบัตรอื่นๆ </h5>
+                            </CardHeader>
+                            <CardBody>
+                                <Row>
+                                    <Col md="4">
+                                        <Label for="exampleSelect">
+                                            ประเภทบัตร
+                                    </Label>
+                                        <Input
+                                            type="select"
+                                            name="select"
+                                            bsSize="sm"
+                                        >
+                                            <option>select..</option>
+                                            <option>1</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                            <option>4</option>
+                                            <option>5</option>
+                                        </Input>
+                                    </Col>
+                                    <Col md="4">
+                                        <FormGroup>
+                                            <Label>เลขที่บัตร</Label>
+                                            <Input
+                                                type="text"
+                                                name="cardid"
+                                                bsSize="sm"
+                                            />
+                                        </FormGroup>
+                                    </Col>
+                                </Row>
+
+                                <Row>
+                                    <Col md="4">
+                                        <FormGroup>
+                                            <Label> วันที่เริ่ม</Label>
+                                            <Input
+                                                type="date"
+                                                name="cardstart"
+                                                bsSize="sm"
+                                            />
+                                        </FormGroup>
+                                    </Col>
+                                    <Col md="4">
+                                        <FormGroup>
+                                            <Label>วันที่สิ้นสุด</Label>
+                                            <Input
+                                                type="date"
+                                                name="cardexpire"
+                                                bsSize="sm"
+                                            />
+                                        </FormGroup>
+                                    </Col>
+                                </Row>
+                                <Row>
+                                    <Col />
+                                    <Col />
+                                    <Button size="sm" color="success">
+                                        <i className="fas fa-plus" /> เพิ่ม
                                 </Button>
-                                &nbsp;
+                                    &nbsp;
                                 <Button size="sm" outline color="danger">
-                                    <i className="fas fa-edit" /> แก้ไข
+                                        <i className="fas fa-edit" /> แก้ไข
                                 </Button>
-                                &nbsp;
+                                    &nbsp;
                                 <Button size="sm" outline color="danger">
-                                    <i className="fas fa-times" /> ปิดใช้งาน
+                                        <i className="fas fa-times" /> ปิดใช้งาน
                                 </Button>
-                                &nbsp;
+                                    &nbsp;
                                 <Button size="sm" color="danger">
-                                    <i className="fas fa-trash-alt" /> ลบ
+                                        <i className="fas fa-trash-alt" /> ลบ
                                 </Button>
-                                &nbsp;
+                                    &nbsp;
                             </Row>
-                            <br />
-                            <ToolkitProvider
-                                keyField="id"
-                                data={rows1}
-                                columns={columns1}
-                                search
-                            >
-                                {props => (
-                                    <div>
-                                        <SearchBar
-                                            {...props.searchProps}
-                                            tableId="tableId"
-                                        />
-                                        <hr />
-                                        <BootstrapTable
-                                            selectRow={selectRow}
-                                            hover={true}
-                                            pagination={paginationFactory(
-                                                options1
-                                            )}
-                                            {...props.baseProps}
-                                        />
-                                    </div>
-                                )}
-                            </ToolkitProvider>
-                        </CardBody>
-                    </Card>
+                                <br />
+                                <ToolkitProvider
+                                    keyField="id"
+                                    data={rows1}
+                                    columns={columns1}
+                                    search
+                                >
+                                    {props => (
+                                        <div>
+                                            <SearchBar
+                                                {...props.searchProps}
+                                                tableId="tableId"
+                                            />
+                                            <hr />
+                                            <BootstrapTable
+                                                selectRow={selectRow}
+                                                hover={true}
+                                                pagination={paginationFactory(
+                                                    options1
+                                                )}
+                                                {...props.baseProps}
+                                            />
+                                        </div>
+                                    )}
+                                </ToolkitProvider>
+                            </CardBody>
+                        </Card>
+                    </Form>
                 </CardBody>
             </div>
         )

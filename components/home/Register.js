@@ -1,4 +1,4 @@
-import React, { Component } from "react"
+import React, { PureComponent } from "react"
 import {
     Row,
     Col,
@@ -23,7 +23,7 @@ const fontSize18px = {
     fontSize: "18px",
 }
 
-export default class Register extends Component {
+export default class Register extends PureComponent {
     constructor(props) {
         super(props)
         this.state = {

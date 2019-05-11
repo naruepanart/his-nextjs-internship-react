@@ -1,4 +1,4 @@
-import React, { Component } from "react"
+import React, { PureComponent } from "react"
 import {
     TabContent,
     TabPane,
@@ -16,7 +16,7 @@ const fontSize14px = {
     fontSize: "14px",
 }
 
-export default class Navbarmain extends Component {
+export default class Navbarmain extends PureComponent {
     constructor(props) {
         super(props)
         this.state = {

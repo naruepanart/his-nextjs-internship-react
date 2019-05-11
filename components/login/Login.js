@@ -1,4 +1,4 @@
-import React, { Component } from "react"
+import React, { PureComponent } from "react"
 import axios from "axios"
 import {
     Card,
@@ -11,7 +11,7 @@ import {
     Label,
 } from "reactstrap"
 
-export default class Login extends Component {
+export default class Login extends PureComponent {
     constructor(props) {
         super(props)
         this.state = {

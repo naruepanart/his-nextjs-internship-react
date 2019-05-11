@@ -1,4 +1,4 @@
-import React, { Component } from "react"
+import React, { PureComponent } from "react"
 import {
     Row,
     Col,
@@ -213,7 +213,7 @@ const options3 = {
     ],
 }
 
-export default class Sendpatient extends Component {
+export default class Sendpatient extends PureComponent {
     constructor(props) {
         super(props)
         this.state = {

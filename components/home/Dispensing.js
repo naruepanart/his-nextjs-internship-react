@@ -1,6 +1,6 @@
-import React, { Component } from "react"
+import React, { PureComponent } from "react"
 
-export default class Dispensing extends Component {
+export default class Dispensing extends PureComponent {
     render() {
         return (
             <React.Fragment>

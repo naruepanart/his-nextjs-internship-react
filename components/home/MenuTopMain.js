@@ -1,4 +1,4 @@
-import React from "react"
+import React, { PureComponent } from 'react'
 import Link from "next/link"
 import { Col, Row, Button, CardBody } from "reactstrap"
 import Regis from "./static/iconSetMainForm64_addPatient.png"
@@ -14,91 +14,91 @@ const fontSize12px = {
     fontSize: "12px",
 }
 
-const MenuTopMain = () => {
-    return (
-        <div>
-            <CardBody>
-                <Row>
-                    <Col md="12">
-                        <Link href="/register">
-                            <Button color="link" size="sm" style={fontSize12px}>
-                                <span className="icon">
-                                    <img src={Regis} width="30" alt="logo" />
-                                    <br />
-                                </span>
-                                ทะเบียนผู้ป่วย
+export default class MenuTopMain extends PureComponent {
+    render() {
+        return (
+            <div>
+                <CardBody>
+                    <Row>
+                        <Col md="12">
+                            <Link href="/register">
+                                <Button color="link" size="sm" style={fontSize12px}>
+                                    <span className="icon">
+                                        <img src={Regis} width="30" alt="logo" />
+                                        <br />
+                                    </span>
+                                    ทะเบียนผู้ป่วย
                             </Button>
-                        </Link>
-                        <Link href="/sendpatient">
-                            <Button color="link" size="sm" style={fontSize12px}>
-                                <span className="icon">
-                                    <img src={SendP} width="30" alt="logo" />
-                                    <br />
-                                </span>
-                                ส่งตรวจผู้ป่วย
+                            </Link>
+                            <Link href="/sendpatient">
+                                <Button color="link" size="sm" style={fontSize12px}>
+                                    <span className="icon">
+                                        <img src={SendP} width="30" alt="logo" />
+                                        <br />
+                                    </span>
+                                    ส่งตรวจผู้ป่วย
                             </Button>
-                        </Link>
+                            </Link>
 
-                        <Link href="/examination">
-                            <Button color="link" size="sm" style={fontSize12px}>
-                                <span className="icon">
-                                    <img src={Nurse} width="30" alt="logo" />
-                                    <br />
-                                </span>
-                                งานหน้าห้องตรวจ
+                            <Link href="/examination">
+                                <Button color="link" size="sm" style={fontSize12px}>
+                                    <span className="icon">
+                                        <img src={Nurse} width="30" alt="logo" />
+                                        <br />
+                                    </span>
+                                    งานหน้าห้องตรวจ
                             </Button>
-                        </Link>
-                        <Link href="/examdoctor">
-                            <Button color="link" size="sm" style={fontSize12px}>
-                                <span className="icon">
-                                    <img src={Doc} width="30" alt="logo" />
-                                    <br />
-                                </span>
-                                งานห้องตรวจแพทย์
+                            </Link>
+                            <Link href="/examdoctor">
+                                <Button color="link" size="sm" style={fontSize12px}>
+                                    <span className="icon">
+                                        <img src={Doc} width="30" alt="logo" />
+                                        <br />
+                                    </span>
+                                    งานห้องตรวจแพทย์
                             </Button>
-                        </Link>
-                        <Link href="/dispensing">
-                            <Button color="link" size="sm" style={fontSize12px}>
-                                <span className="icon">
-                                    <img src={Drug} width="30" alt="logo" />
-                                    <br />
-                                </span>
-                                งานห้องจ่ายยา
+                            </Link>
+                            <Link href="/dispensing">
+                                <Button color="link" size="sm" style={fontSize12px}>
+                                    <span className="icon">
+                                        <img src={Drug} width="30" alt="logo" />
+                                        <br />
+                                    </span>
+                                    งานห้องจ่ายยา
                             </Button>
-                        </Link>
+                            </Link>
 
-                        <Link href="/">
-                            <Button color="link" size="sm" style={fontSize12px}>
-                                <span className="icon">
-                                    <img src={Xray} width="30" alt="logo" />
-                                    <br />
-                                </span>
-                                งานหน้าห้อง X-ray
+                            <Link href="/">
+                                <Button color="link" size="sm" style={fontSize12px}>
+                                    <span className="icon">
+                                        <img src={Xray} width="30" alt="logo" />
+                                        <br />
+                                    </span>
+                                    งานหน้าห้อง X-ray
                             </Button>
-                        </Link>
-                        <Link href="/">
-                            <Button color="link" size="sm" style={fontSize12px}>
-                                <span className="icon">
-                                    <img src={Coin} width="30" alt="logo" />
-                                    <br />
-                                </span>
-                                งานห้องการเงิน
+                            </Link>
+                            <Link href="/">
+                                <Button color="link" size="sm" style={fontSize12px}>
+                                    <span className="icon">
+                                        <img src={Coin} width="30" alt="logo" />
+                                        <br />
+                                    </span>
+                                    งานห้องการเงิน
                             </Button>
-                        </Link>
-                        <Link href="/">
-                            <Button color="link" size="sm" style={fontSize12px}>
-                                <span className="icon">
-                                    <img src={Manage} width="30" alt="logo" />
-                                    <br />
-                                </span>
-                                Manage Session
+                            </Link>
+                            <Link href="/">
+                                <Button color="link" size="sm" style={fontSize12px}>
+                                    <span className="icon">
+                                        <img src={Manage} width="30" alt="logo" />
+                                        <br />
+                                    </span>
+                                    Manage Session
                             </Button>
-                        </Link>
-                    </Col>
-                </Row>
-            </CardBody>
-        </div>
-    )
+                            </Link>
+                        </Col>
+                    </Row>
+                </CardBody>
+            </div>
+        )
+    }
 }
-
-export default MenuTopMain

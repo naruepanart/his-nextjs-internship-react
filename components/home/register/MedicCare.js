@@ -1,4 +1,4 @@
-import React from "react"
+import React, { PureComponent } from "react"
 import { Row, Col, Card, CardBody, CardHeader, Input } from "reactstrap"
 import BootstrapTable from "react-bootstrap-table-next"
 import paginationFactory from "react-bootstrap-table2-paginator"
@@ -164,7 +164,7 @@ const options2 = {
     ],
 }
 
-export default class MedicCare extends React.Component {
+export default class MedicCare extends PureComponent {
     constructor(props) {
         super(props)
         this.state = {

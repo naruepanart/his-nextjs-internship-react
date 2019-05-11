@@ -1,8 +1,8 @@
-import React from "react"
+import React, { PureComponent } from "react"
 import Camera from "react-camera"
 import { Row, Col, Button, Card, CardBody } from "reactstrap"
 
-export default class CameraGG extends React.Component {
+export default class CameraGG extends PureComponent {
     constructor(props) {
         super(props)
     }

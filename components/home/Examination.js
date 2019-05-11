@@ -1,4 +1,4 @@
-import React from "react"
+import React, { PureComponent } from "react"
 import Head from "next/head"
 import BootstrapTable from "react-bootstrap-table-next"
 import paginationFactory from "react-bootstrap-table2-paginator"
@@ -97,7 +97,7 @@ const options2 = {
     ],
 }
 
-class Examination extends React.Component {
+class Examination extends PureComponent {
     constructor(props) {
         super(props)
         this.state = {
