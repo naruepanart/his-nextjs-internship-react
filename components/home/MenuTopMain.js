@@ -1,7 +1,7 @@
 import React, { PureComponent } from "react"
 import Link from "next/link"
 import Head from "next/head"
-
+import { Navbar, NavbarBrand } from "reactstrap"
 import Regis from "./static/iconSetMainForm64_addPatient.png"
 import SendP from "./static/iconSetMainForm64_sendPatient.png"
 import Nurse from "./static/iconSetMainForm64_nurse-04.png"
@@ -10,6 +10,10 @@ import Drug from "./static/iconSetMainForm64_drug.png"
 import Xray from "./static/iconSetMainForm64_xray-15.png"
 import Coin from "./static/iconSetMainForm64_coin.png"
 import Manage from "./static/iconSetMainForm64_calendar.png"
+
+const fontSize18px = {
+    fontSize: "18px",
+}
 
 export default class MenuTopMain extends PureComponent {
     render() {
@@ -24,17 +28,14 @@ export default class MenuTopMain extends PureComponent {
                     <script src="https://cdn.metroui.org.ua/v4/js/metro.min.js" />
                 </Head>
 
-                <ul className="h-menu row bg-primary">
-                    <li>
-                        <a className="fg-white" />
-                    </li>
-                    &nbsp;&nbsp;
-                </ul>
+                <Navbar color="primary" dark className="py-md-0">
+                    <NavbarBrand href="/" style={fontSize18px}>
+                        HIS
+                    </NavbarBrand>
+                </Navbar>
+
                 <nav className="rib" data-role="ribbonmenu">
                     <ul className="tabs-holder">
-                        <li className="static bg-primary">
-                            <a href="/home"> HIS </a>
-                        </li>
                         <li>
                             <a href="#section-1-1">Home</a>
                         </li>
@@ -139,7 +140,7 @@ export default class MenuTopMain extends PureComponent {
 
                                 <span className="title">OPD</span>
                             </div>
-                            
+
                             <div className="group">
                                 <button className="ribbon-button">
                                     <span className="icon">
