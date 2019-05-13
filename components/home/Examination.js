@@ -1,21 +1,17 @@
 import React, { PureComponent } from "react"
 import Head from "next/head"
+import { Navbar, NavbarBrand } from "reactstrap"
 import BootstrapTable from "react-bootstrap-table-next"
-import paginationFactory from "react-bootstrap-table2-paginator"
 import ToolkitProvider, { Search } from "react-bootstrap-table2-toolkit"
-import dynamic from "next/dynamic"
 import cellEditFactory from "react-bootstrap-table2-editor"
-import "react-splitter-layout/lib/index.css"
 
-import { Progress } from "reactstrap"
+const fontSize14px = {
+    fontSize: "14px",
+}
 
 const fontSize12px = {
     fontSize: "12px",
 }
-
-const SplitterLayout = dynamic(() => import("react-splitter-layout"), {
-    ssr: false,
-})
 
 const columns2 = [
     {
@@ -54,48 +50,42 @@ const rows2 = [
         contact: "088xxx",
         status: "11",
     },
+    {
+        id: 1,
+        authority: "Benz",
+        tutelage: "10",
+        contact: "088xxx",
+        status: "11",
+    },
+    {
+        id: 2,
+        authority: "Benz",
+        tutelage: "10",
+        contact: "088xxx",
+        status: "11",
+    },
+    {
+        id: 3,
+        authority: "Benz",
+        tutelage: "10",
+        contact: "088xxx",
+        status: "11",
+    },
+    {
+        id: 4,
+        authority: "Benz",
+        tutelage: "10",
+        contact: "088xxx",
+        status: "11",
+    },
+    {
+        id: 5,
+        authority: "Benz",
+        tutelage: "10",
+        contact: "088xxx",
+        status: "11",
+    },
 ]
-
-const selectRow = {
-    mode: "checkbox",
-    clickToSelect: true,
-    selected: [],
-}
-
-const customTotal = (from, to, size) => (
-    <span className="react-bootstrap-table-pagination-total">
-        &nbsp; Showing {from} to {to} of {size} Results
-    </span>
-)
-
-const options2 = {
-    paginationSize: 4,
-    pageStartIndex: 1,
-    firstPageText: "<<",
-    prePageText: "<",
-    nextPageText: ">",
-    lastPageText: ">>",
-    nextPageTitle: "First page",
-    prePageTitle: "Pre page",
-    firstPageTitle: "Next page",
-    lastPageTitle: "Last page",
-    showTotal: true,
-    paginationTotalRenderer: customTotal,
-    sizePerPageList: [
-        {
-            text: "5",
-            value: 5,
-        },
-        {
-            text: "10",
-            value: 10,
-        },
-        {
-            text: "All",
-            value: rows2.length,
-        },
-    ],
-}
 
 class Examination extends PureComponent {
     constructor(props) {
@@ -126,15 +116,149 @@ class Examination extends PureComponent {
                     <script src="https://cdn.metroui.org.ua/v4/js/metro.min.js" />
                 </Head>
 
-                <div data-role="splitter" class="h-100">
-                    <div class="d-flex flex-justify-center flex-align-center">
-                        This is panel 1
+                <Navbar color="primary" dark className="py-md-0">
+                    <NavbarBrand href="/" style={fontSize14px}>
+                        งานหน้าห้องตรวจ
+                    </NavbarBrand>
+                </Navbar>
+
+                <div data-role="splitter" className="h-100">
+                    <ToolkitProvider
+                        keyField="id"
+                        data={rows2}
+                        columns={columns2}
+                        search
+                    >
+                        {props => (
+                            <div>
+                                <div
+                                    data-role="progress"
+                                    data-value="100"
+                                    data-small="true"
+                                    data-cls-bar="bg-yellow"
+                                />
+
+                                <Navbar
+                                    color="primary"
+                                    dark
+                                    className="py-md-0"
+                                >
+                                    <NavbarBrand href="/" style={fontSize14px}>
+                                        <i className="fas fa-first-aid" />
+                                        &nbsp; รอ...
+                                    </NavbarBrand>
+                                </Navbar>
+                                <br />
+                                <SearchBar
+                                    {...props.searchProps}
+                                    tableId="tableId"
+                                />
+                                <ClearSearchButton {...props.searchProps} />
+
+                                <BootstrapTable
+                                    hover={true}
+                                    {...props.baseProps}
+                                    cellEdit={cellEditFactory({
+                                        mode: "dbclick",
+                                    })}
+                                />
+                            </div>
+                        )}
+                    </ToolkitProvider>
+
+                    <div>
+                        <ToolkitProvider
+                            keyField="id"
+                            data={rows2}
+                            columns={columns2}
+                            search
+                        >
+                            {props => (
+                                <div>
+                                    <div
+                                        data-role="progress"
+                                        data-value="100"
+                                        data-small="true"
+                                        data-cls-bar="bg-green"
+                                    />
+                                    <Navbar
+                                        color="primary"
+                                        dark
+                                        className="py-md-0"
+                                    >
+                                        <NavbarBrand
+                                            href="/"
+                                            style={fontSize14px}
+                                        >
+                                            <i className="fas fa-first-aid" />
+                                            &nbsp; รอ...
+                                        </NavbarBrand>
+                                    </Navbar>
+                                    <br />
+
+                                    <SearchBar
+                                        {...props.searchProps}
+                                        tableId="tableId"
+                                    />
+                                    <ClearSearchButton {...props.searchProps} />
+
+                                    <BootstrapTable
+                                        hover={true}
+                                        {...props.baseProps}
+                                        cellEdit={cellEditFactory({
+                                            mode: "dbclick",
+                                        })}
+                                    />
+                                </div>
+                            )}
+                        </ToolkitProvider>
                     </div>
-                    <div class="d-flex flex-justify-center flex-align-center">
-                        This is panel 2
-                    </div>
-                    <div class="d-flex flex-justify-center flex-align-center">
-                        This is panel 3
+                    <div>
+                        <ToolkitProvider
+                            keyField="id"
+                            data={rows2}
+                            columns={columns2}
+                            search
+                        >
+                            {props => (
+                                <div>
+                                    <div
+                                        data-role="progress"
+                                        data-value="100"
+                                        data-small="true"
+                                        data-cls-bar="bg-pink"
+                                    />
+                                    <Navbar
+                                        color="primary"
+                                        dark
+                                        className="py-md-0"
+                                    >
+                                        <NavbarBrand
+                                            href="/"
+                                            style={fontSize14px}
+                                        >
+                                            <i className="fas fa-first-aid" />
+                                            &nbsp; รอ...
+                                        </NavbarBrand>
+                                    </Navbar>
+                                    <br />
+
+                                    <SearchBar
+                                        {...props.searchProps}
+                                        tableId="tableId"
+                                    />
+                                    <ClearSearchButton {...props.searchProps} />
+
+                                    <BootstrapTable
+                                        hover={true}
+                                        {...props.baseProps}
+                                        cellEdit={cellEditFactory({
+                                            mode: "dbclick",
+                                        })}
+                                    />
+                                </div>
+                            )}
+                        </ToolkitProvider>
                     </div>
                 </div>
             </div>
