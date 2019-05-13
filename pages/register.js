@@ -1,13 +1,11 @@
-import React, { PureComponent } from 'react'
+import React, { PureComponent } from "react"
 import Head from "next/head"
 import dynamic from "next/dynamic"
-const Navbarmain = dynamic(() => import("../components/home/Navbarmain"), {
+
+const MenuTopMain = dynamic(() => import("../components/home/MenuTopMain"), {
     ssr: false,
 })
 const Register = dynamic(() => import("../components/home/Register"), {
-    ssr: false,
-})
-const TabsMain = dynamic(() => import("../components/home/TabsMain"), {
     ssr: false,
 })
 
@@ -31,11 +29,10 @@ export default class register extends PureComponent {
                         crossOrigin="anonymous"
                     />
                 </Head>
-                <Navbarmain />
-                <TabsMain />
+
+                <MenuTopMain />
                 <Register />
             </div>
         )
     }
 }
-

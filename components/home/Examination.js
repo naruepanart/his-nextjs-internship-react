@@ -118,124 +118,25 @@ class Examination extends PureComponent {
             <div style={fontSize12px}>
                 <Head>
                     <title>HIS - Examination</title>
+                    <link
+                        rel="stylesheet"
+                        href="https://cdn.metroui.org.ua/v4/css/metro-all.min.css"
+                    />
+                    <script src="https://code.jquery.com/jquery-3.3.1.min.js" />
+                    <script src="https://cdn.metroui.org.ua/v4/js/metro.min.js" />
                 </Head>
-                <SplitterLayout primaryIndex={1} secondaryInitialSize={450}>
-                    <div>
-                        <Progress multi>
-                            <Progress bar animated color="warning" value="100">
-                                Waiting
-                            </Progress>
-                        </Progress>
-                        <br />
-                        <ToolkitProvider
-                            keyField="id"
-                            data={rows2}
-                            columns={columns2}
-                            search
-                        >
-                            {props => (
-                                <div>
-                                    <SearchBar
-                                        {...props.searchProps}
-                                        tableId="tableId"
-                                    />
-                                    <ClearSearchButton {...props.searchProps} />
-                                    <hr />
-                                    <BootstrapTable
-                                        hover={true}
-                                        pagination={paginationFactory(options2)}
-                                        {...props.baseProps}
-                                        cellEdit={cellEditFactory({
-                                            mode: "dbclick",
-                                        })}
-                                    />
-                                </div>
-                            )}
-                        </ToolkitProvider>
-                    </div>
-                    <SplitterLayout secondaryInitialSize={450}>
-                        <div>
-                            <Progress multi>
-                                <Progress bar animated value="100">
-                                    Process
-                                </Progress>
-                            </Progress>
-                            <br />
-                            <ToolkitProvider
-                                keyField="id"
-                                data={rows2}
-                                columns={columns2}
-                                search
-                            >
-                                {props => (
-                                    <div>
-                                        <SearchBar
-                                            {...props.searchProps}
-                                            tableId="tableId"
-                                        />
-                                        <ClearSearchButton
-                                            {...props.searchProps}
-                                        />
-                                        <hr />
-                                        <BootstrapTable
-                                            hover={true}
-                                            pagination={paginationFactory(
-                                                options2
-                                            )}
-                                            {...props.baseProps}
-                                            cellEdit={cellEditFactory({
-                                                mode: "dbclick",
-                                            })}
-                                        />
-                                    </div>
-                                )}
-                            </ToolkitProvider>
-                        </div>
 
-                        <div>
-                            <Progress multi>
-                                <Progress
-                                    bar
-                                    animated
-                                    color="success"
-                                    value="100"
-                                >
-                                    Success
-                                </Progress>
-                            </Progress>
-                            <br />
-                            <ToolkitProvider
-                                keyField="id"
-                                data={rows2}
-                                columns={columns2}
-                                search
-                            >
-                                {props => (
-                                    <div>
-                                        <SearchBar
-                                            {...props.searchProps}
-                                            tableId="tableId"
-                                        />
-                                        <ClearSearchButton
-                                            {...props.searchProps}
-                                        />
-                                        <hr />
-                                        <BootstrapTable
-                                            hover={true}
-                                            pagination={paginationFactory(
-                                                options2
-                                            )}
-                                            {...props.baseProps}
-                                            cellEdit={cellEditFactory({
-                                                mode: "dbclick",
-                                            })}
-                                        />
-                                    </div>
-                                )}
-                            </ToolkitProvider>
-                        </div>
-                    </SplitterLayout>
-                </SplitterLayout>
+                <div data-role="splitter" class="h-100">
+                    <div class="d-flex flex-justify-center flex-align-center">
+                        This is panel 1
+                    </div>
+                    <div class="d-flex flex-justify-center flex-align-center">
+                        This is panel 2
+                    </div>
+                    <div class="d-flex flex-justify-center flex-align-center">
+                        This is panel 3
+                    </div>
+                </div>
             </div>
         )
     }

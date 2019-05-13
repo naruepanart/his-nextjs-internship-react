@@ -1,12 +1,11 @@
 import React, { PureComponent } from 'react'
 import Head from "next/head"
 import dynamic from "next/dynamic"
-const Navbarmain = dynamic(() => import("../components/home/Navbarmain"), {
+
+const MenuTopMain = dynamic(() => import("../components/home/MenuTopMain"), {
     ssr: false,
 })
-const TabsMain = dynamic(() => import("../components/home/TabsMain"), {
-    ssr: false,
-})
+
 const Examination = dynamic(() => import("../components/home/Examination"), {
     ssr: false,
 })
@@ -31,8 +30,7 @@ export default class examination extends PureComponent {
                         crossOrigin="anonymous"
                     />
                 </Head>
-                <Navbarmain />
-                <TabsMain />
+                <MenuTopMain />
                 <Examination />
             </div>
         )

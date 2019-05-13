@@ -1,8 +1,8 @@
-import React, { PureComponent } from 'react'
+import React, { PureComponent } from "react"
 import dynamic from "next/dynamic"
 import Head from "next/head"
-const Login = dynamic(() => import("../components/login/Login"), { ssr: false })
 
+const Login = dynamic(() => import("../components/login/Login"), { ssr: false })
 
 export default class login extends PureComponent {
     render() {
@@ -28,4 +28,3 @@ export default class login extends PureComponent {
         )
     }
 }
-

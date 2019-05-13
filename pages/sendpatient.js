@@ -1,16 +1,13 @@
-import React, { PureComponent } from 'react'
-import Head from 'next/head'
-import dynamic from 'next/dynamic'
-const Navbarmain = dynamic(() => import('../components/home/Navbarmain'), {
-    ssr: false,
-})
-const TabsMain = dynamic(() => import('../components/home/TabsMain'), {
-    ssr: false,
-})
-const Sendpatient = dynamic(() => import('../components/home/Sendpatient'), {
-    ssr: false,
-})
+import React, { PureComponent } from "react"
+import Head from "next/head"
+import dynamic from "next/dynamic"
 
+const MenuTopMain = dynamic(() => import("../components/home/MenuTopMain"), {
+    ssr: false,
+})
+const Sendpatient = dynamic(() => import("../components/home/Sendpatient"), {
+    ssr: false,
+})
 
 export default class sendpatient extends PureComponent {
     render() {
@@ -31,11 +28,9 @@ export default class sendpatient extends PureComponent {
                         crossOrigin="anonymous"
                     />
                 </Head>
-                <Navbarmain />
-                <TabsMain />
+                <MenuTopMain />
                 <Sendpatient />
             </div>
         )
     }
 }
-
