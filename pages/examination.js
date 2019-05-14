@@ -1,4 +1,4 @@
-import React, { PureComponent } from 'react'
+import React, { PureComponent } from "react"
 import Head from "next/head"
 import dynamic from "next/dynamic"
 
@@ -10,11 +10,10 @@ const Examination = dynamic(() => import("../components/home/Examination"), {
     ssr: false,
 })
 
-
 export default class examination extends PureComponent {
     render() {
         return (
-            <div>
+            <MenuTopMain>
                 <Head>
                     <title>HIS - Examination</title>
                     <link
@@ -30,10 +29,8 @@ export default class examination extends PureComponent {
                         crossOrigin="anonymous"
                     />
                 </Head>
-                <MenuTopMain />
                 <Examination />
-            </div>
+            </MenuTopMain>
         )
     }
 }
-

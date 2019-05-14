@@ -7,7 +7,7 @@ const Login = dynamic(() => import("../components/login/Login"), { ssr: false })
 export default class login extends PureComponent {
     render() {
         return (
-            <div>
+            <React.Fragment>
                 <Head>
                     <title>HIS - Login</title>
                     <link
@@ -24,7 +24,7 @@ export default class login extends PureComponent {
                     />
                 </Head>
                 <Login />
-            </div>
+            </React.Fragment>
         )
     }
 }

@@ -39,7 +39,7 @@ export default class MenuTopMain extends PureComponent {
                         <li>
                             <a href="#section-1-1">Home</a>
                         </li>
-                        <li>
+                        {/* <li>
                             <a href="#section-1-2">Master</a>
                         </li>
                         <li>
@@ -47,7 +47,7 @@ export default class MenuTopMain extends PureComponent {
                         </li>
                         <li>
                             <a href="#section-1-4">Reports</a>
-                        </li>
+                        </li> */}
 
                         {/*   <li>
                             <a
@@ -196,6 +196,9 @@ export default class MenuTopMain extends PureComponent {
                         <div className="section" id="section-1-4" />
                     </div>
                 </nav>
+                <div>
+                    {this.props.children}
+                </div>
             </div>
         )
     }

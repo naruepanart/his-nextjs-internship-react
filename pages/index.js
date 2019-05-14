@@ -9,7 +9,7 @@ const MenuTopMain = dynamic(() => import("../components/home/MenuTopMain"), {
 export default class index extends PureComponent {
     render() {
         return (
-            <div>
+            <MenuTopMain>
                 <Head>
                     <title>HIS - Homepage</title>
                     <link
@@ -25,8 +25,10 @@ export default class index extends PureComponent {
                         crossOrigin="anonymous"
                     />
                 </Head>
-                <MenuTopMain />
-            </div>
+                <center>
+                    <h1>Home Page</h1>
+                </center>
+            </MenuTopMain>
         )
     }
 }

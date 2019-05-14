@@ -9,11 +9,10 @@ const Register = dynamic(() => import("../components/home/Register"), {
     ssr: false,
 })
 
-
 export default class register extends PureComponent {
     render() {
         return (
-            <div>
+            <MenuTopMain>
                 <Head>
                     <title>HIS - Register</title>
                     <link
@@ -29,10 +28,8 @@ export default class register extends PureComponent {
                         crossOrigin="anonymous"
                     />
                 </Head>
-
-                <MenuTopMain />
                 <Register />
-            </div>
+            </MenuTopMain>
         )
     }
 }

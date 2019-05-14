@@ -12,7 +12,7 @@ const Sendpatient = dynamic(() => import("../components/home/Sendpatient"), {
 export default class sendpatient extends PureComponent {
     render() {
         return (
-            <div>
+            <MenuTopMain>
                 <Head>
                     <title>HIS - Sendpatient</title>
                     <link
@@ -28,9 +28,8 @@ export default class sendpatient extends PureComponent {
                         crossOrigin="anonymous"
                     />
                 </Head>
-                <MenuTopMain />
                 <Sendpatient />
-            </div>
+            </MenuTopMain>
         )
     }
 }

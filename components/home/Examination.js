@@ -1,9 +1,8 @@
 import React, { PureComponent } from "react"
 import Head from "next/head"
-import { Navbar, NavbarBrand } from "reactstrap"
+import { Navbar, NavbarBrand, Table, Alert } from "reactstrap"
 import BootstrapTable from "react-bootstrap-table-next"
 import ToolkitProvider, { Search } from "react-bootstrap-table2-toolkit"
-import cellEditFactory from "react-bootstrap-table2-editor"
 
 const fontSize14px = {
     fontSize: "14px",
@@ -48,43 +47,8 @@ const rows2 = [
         authority: "Benz",
         tutelage: "10",
         contact: "088xxx",
-        status: "11",
-    },
-    {
-        id: 1,
-        authority: "Benz",
-        tutelage: "10",
-        contact: "088xxx",
-        status: "11",
-    },
-    {
-        id: 2,
-        authority: "Benz",
-        tutelage: "10",
-        contact: "088xxx",
-        status: "11",
-    },
-    {
-        id: 3,
-        authority: "Benz",
-        tutelage: "10",
-        contact: "088xxx",
-        status: "11",
-    },
-    {
-        id: 4,
-        authority: "Benz",
-        tutelage: "10",
-        contact: "088xxx",
-        status: "11",
-    },
-    {
-        id: 5,
-        authority: "Benz",
-        tutelage: "10",
-        contact: "088xxx",
-        status: "11",
-    },
+        status: "status",
+    }, 
 ]
 
 class Examination extends PureComponent {
@@ -123,48 +87,43 @@ class Examination extends PureComponent {
                 </Navbar>
 
                 <div data-role="splitter" className="h-100">
-                    <ToolkitProvider
-                        keyField="id"
-                        data={rows2}
-                        columns={columns2}
-                        search
-                    >
-                        {props => (
-                            <div>
-                                <div
-                                    data-role="progress"
-                                    data-value="100"
-                                    data-small="true"
-                                    data-cls-bar="bg-yellow"
-                                />
-
-                                <Navbar
-                                    color="primary"
-                                    dark
-                                    className="py-md-0"
-                                >
-                                    <NavbarBrand href="/" style={fontSize14px}>
-                                        <i className="fas fa-first-aid" />
-                                        &nbsp; รอ...
-                                    </NavbarBrand>
-                                </Navbar>
-                                <br />
-                                <SearchBar
-                                    {...props.searchProps}
-                                    tableId="tableId"
-                                />
-                                <ClearSearchButton {...props.searchProps} />
-
-                                <BootstrapTable
-                                    hover={true}
-                                    {...props.baseProps}
-                                    cellEdit={cellEditFactory({
-                                        mode: "dbclick",
-                                    })}
-                                />
-                            </div>
-                        )}
-                    </ToolkitProvider>
+                    <Table  bordered>
+                        <thead>
+                            <div
+                                data-role="progress"
+                                data-value="100"
+                                data-small="true"
+                                data-cls-bar="bg-orange"
+                            />
+                            <tr>
+                                <th>No</th>
+                                <th>Status</th>
+                                <th>Status</th>
+                                <th>Status</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>Jacob</td>
+                                <td>Thornton</td>
+                                <td>@fat</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td>Larry</td>
+                                <td>the Bird</td>
+                                <td>@twitter</td>
+                            </tr>
+                        </tbody>
+                    </Table>
 
                     <div>
                         <ToolkitProvider
@@ -205,9 +164,7 @@ class Examination extends PureComponent {
                                     <BootstrapTable
                                         hover={true}
                                         {...props.baseProps}
-                                        cellEdit={cellEditFactory({
-                                            mode: "dbclick",
-                                        })}
+                                       
                                     />
                                 </div>
                             )}
@@ -252,9 +209,7 @@ class Examination extends PureComponent {
                                     <BootstrapTable
                                         hover={true}
                                         {...props.baseProps}
-                                        cellEdit={cellEditFactory({
-                                            mode: "dbclick",
-                                        })}
+                                      
                                     />
                                 </div>
                             )}

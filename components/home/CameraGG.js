@@ -15,9 +15,9 @@ export default class CameraGG extends PureComponent {
         })
     }
     render() {
-        let img = this.props
+        let img = this.props 
         return (
-            <div>
+            <React.Fragment>
                 <Row>
                     <Col md="6">
                         <Card body className="text-center">
@@ -55,7 +55,7 @@ export default class CameraGG extends PureComponent {
                         </Card>
                     </Col>
                 </Row>
-            </div>
+            </React.Fragment>
         )
     }
 }
