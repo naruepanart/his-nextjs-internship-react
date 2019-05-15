@@ -182,12 +182,10 @@ class Ginformation extends PureComponent {
                                             required
                                             bsSize="sm"
                                         >
-                                            <option>select..</option>
-                                            <option>1</option>
-                                            <option>2</option>
-                                            <option>3</option>
-                                            <option>4</option>
-                                            <option>5</option>
+                                            <option>เลือกคำนำหน้า...</option>
+                                            <option>นาย</option>
+                                            <option>นาง</option>
+                                            <option>นางสาว</option>
                                         </Input>
                                     </Col>
                                     <Col md="3">
@@ -241,12 +239,11 @@ class Ginformation extends PureComponent {
                                             name="select"
                                             bsSize="sm"
                                         >
-                                            <option>select..</option>
-                                            <option>1</option>
-                                            <option>2</option>
-                                            <option>3</option>
-                                            <option>4</option>
-                                            <option>5</option>
+                                            <option>Title Name..</option>
+                                            <option>Mr.</option>
+                                            <option>Mrs.</option>
+                                            <option>Miss</option>
+                                            
                                         </Input>
                                     </Col>
                                     <Col md="3">
@@ -372,12 +369,10 @@ class Ginformation extends PureComponent {
                                             name="select"
                                             bsSize="sm"
                                         >
-                                            <option>select..</option>
-                                            <option>1</option>
-                                            <option>2</option>
-                                            <option>3</option>
-                                            <option>4</option>
-                                            <option>5</option>
+                                            <option>เลือกเพศ...</option>
+                                            <option>ชาย</option>
+                                            <option>หญิง</option>
+                                            
                                         </Input>
                                     </Col>
                                     <Col md="4">
@@ -388,12 +383,12 @@ class Ginformation extends PureComponent {
                                             bsSize="sm"
                                             required
                                         >
-                                            <option>select..</option>
-                                            <option>1</option>
-                                            <option>2</option>
-                                            <option>3</option>
-                                            <option>4</option>
-                                            <option>5</option>
+                                            <option>สถานะภาพ...</option>
+                                            <option>โสด</option>
+                                            <option>สมรส</option>
+                                            <option>หม้าย</option>
+                                            <option>หย่า</option>
+                                            <option>แยกกันอยู่</option>
                                         </Input>
                                     </Col>
                                 </Row>
@@ -408,12 +403,12 @@ class Ginformation extends PureComponent {
                                                 bsSize="sm"
                                                 required
                                             >
-                                                <option>select..</option>
-                                                <option>1</option>
-                                                <option>2</option>
-                                                <option>3</option>
-                                                <option>4</option>
-                                                <option>5</option>
+                                                <option>เลือก...</option>
+                                                <option>นักบัญชี</option>
+                                                <option>แพทย์</option>
+                                                <option>พยาบาล</option>
+                                                <option>เภสัช</option>
+                                                <option>ช่าง</option>
                                             </Input>
                                         </FormGroup>
                                     </Col>
@@ -431,12 +426,11 @@ class Ginformation extends PureComponent {
                                                 bsSize="sm"
                                                 required
                                             >
-                                                <option>select..</option>
-                                                <option>1</option>
-                                                <option>2</option>
-                                                <option>3</option>
-                                                <option>4</option>
-                                                <option>5</option>
+                                                <option>เลือกสัญชาติ</option>
+                                                <option>ไทย</option>
+                                                <option>เวียดนาม</option>
+                                                <option>จีน</option>
+                                               
                                             </Input>
                                         </FormGroup>
                                     </Col>
@@ -448,12 +442,11 @@ class Ginformation extends PureComponent {
                                             bsSize="sm"
                                             required
                                         >
-                                            <option>select..</option>
-                                            <option>1</option>
-                                            <option>2</option>
-                                            <option>3</option>
-                                            <option>4</option>
-                                            <option>5</option>
+                                            <option>เลือกเชื้อชาติ...</option>
+                                            <option>ไทย</option>
+                                            <option>เวียดนาม</option>
+                                            <option>จีน</option>
+                                            
                                         </Input>
                                     </Col>
                                     <Col md="4">
@@ -464,12 +457,11 @@ class Ginformation extends PureComponent {
                                             bsSize="sm"
                                             required
                                         >
-                                            <option>select..</option>
-                                            <option>1</option>
-                                            <option>2</option>
-                                            <option>3</option>
-                                            <option>4</option>
-                                            <option>5</option>
+                                            <option>เลือกศาสนา...</option>
+                                            <option>พุทธ</option>
+                                            <option>คริสต์</option>
+                                            <option>อิสลาม</option>
+                                            
                                         </Input>
                                     </Col>
                                 </Row>
@@ -486,12 +478,12 @@ class Ginformation extends PureComponent {
                                                 bsSize="sm"
                                                 required
                                             >
-                                                <option>select..</option>
-                                                <option>1</option>
-                                                <option>2</option>
-                                                <option>3</option>
-                                                <option>4</option>
-                                                <option>5</option>
+                                                <option>เลือกหมู่เลือด...</option>
+                                                <option>A</option>
+                                                <option>AB</option>
+                                                <option>B</option>
+                                                <option>O</option>
+                                                
                                             </Input>
                                         </FormGroup>
                                     </Col>
@@ -502,12 +494,10 @@ class Ginformation extends PureComponent {
                                             name="select"
                                             bsSize="sm"
                                         >
-                                            <option>select..</option>
-                                            <option>1</option>
-                                            <option>2</option>
-                                            <option>3</option>
-                                            <option>4</option>
-                                            <option>5</option>
+                                            <option>เลือก RH...</option>
+                                            <option>RH-</option>
+                                            <option>RH+</option>
+                                            
                                         </Input>
                                     </Col>
                                 </Row>
@@ -659,12 +649,10 @@ class Ginformation extends PureComponent {
                                             name="select"
                                             bsSize="sm"
                                         >
-                                            <option>select..</option>
-                                            <option>1</option>
-                                            <option>2</option>
-                                            <option>3</option>
-                                            <option>4</option>
-                                            <option>5</option>
+                                            <option>เลือกประเภทบัตร...</option>
+                                            <option>บัตรประชาชน</option>
+                                            <option>ใบอนุญาตขับขี่</option>
+                                            
                                         </Input>
                                     </Col>
                                     <Col md="4">

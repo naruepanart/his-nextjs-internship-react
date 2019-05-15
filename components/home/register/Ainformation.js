@@ -211,12 +211,12 @@ class Ainformation extends PureComponent {
                                             name="select"
                                             bsSize="sm"
                                         >
-                                            <option>select..</option>
-                                            <option>1</option>
-                                            <option>2</option>
-                                            <option>3</option>
-                                            <option>4</option>
-                                            <option>5</option>
+                                            <option>เลือกจังหวัด...</option>
+                                            <option>บุรีรัมย์</option>
+                                            <option>นครราชสีมา</option>
+                                            <option>หนองคาย</option>
+                                            <option>จันทบุรี</option>
+                                            <option>ราชบุรี</option>
                                         </Input>
                                     </Col>
                                     <Col md="4">
@@ -226,12 +226,9 @@ class Ainformation extends PureComponent {
                                             name="select"
                                             bsSize="sm"
                                         >
-                                            <option>select..</option>
-                                            <option>1</option>
-                                            <option>2</option>
-                                            <option>3</option>
-                                            <option>4</option>
-                                            <option>5</option>
+                                            <option>เลือกอำเภอ...</option>
+                                            <option>เมือง</option>
+                                            
                                         </Input>
                                     </Col>
                                 </Row>
@@ -246,12 +243,11 @@ class Ainformation extends PureComponent {
                                             name="select"
                                             bsSize="sm"
                                         >
-                                            <option>select..</option>
-                                            <option>1</option>
-                                            <option>2</option>
-                                            <option>3</option>
-                                            <option>4</option>
-                                            <option>5</option>
+                                            <option>เลือกตำบล...</option>
+                                            <option>ในเมือง</option>
+                                            <option>สุรนารี</option>
+                                            <option>ลำปลายมาศ</option>
+                                            
                                         </Input>
                                     </Col>
                                     <Col md="4">
@@ -259,16 +255,11 @@ class Ainformation extends PureComponent {
                                             รหัสไปรษณีย์
                                         </Label>
                                         <Input
-                                            type="select"
+                                            type="number"
                                             name="select"
                                             bsSize="sm"
                                         >
-                                            <option>select..</option>
-                                            <option>1</option>
-                                            <option>2</option>
-                                            <option>3</option>
-                                            <option>4</option>
-                                            <option>5</option>
+                                            
                                         </Input>
                                     </Col>
                                 </Row>
@@ -322,7 +313,7 @@ class Ainformation extends PureComponent {
 
                                 <Row>
                                     <Col md="4">
-                                        <Label for="exampleSelect">
+                                    <Label for="exampleSelect">
                                             จังหวัด
                                         </Label>
                                         <Input
@@ -330,12 +321,12 @@ class Ainformation extends PureComponent {
                                             name="select"
                                             bsSize="sm"
                                         >
-                                            <option>select..</option>
-                                            <option>1</option>
-                                            <option>2</option>
-                                            <option>3</option>
-                                            <option>4</option>
-                                            <option>5</option>
+                                            <option>เลือกจังหวัด...</option>
+                                            <option>บุรีรัมย์</option>
+                                            <option>นครราชสีมา</option>
+                                            <option>หนองคาย</option>
+                                            <option>จันทบุรี</option>
+                                            <option>ราชบุรี</option>
                                         </Input>
                                     </Col>
                                     <Col md="4">
@@ -345,15 +336,13 @@ class Ainformation extends PureComponent {
                                             name="select"
                                             bsSize="sm"
                                         >
-                                            <option>select..</option>
-                                            <option>1</option>
-                                            <option>2</option>
-                                            <option>3</option>
-                                            <option>4</option>
-                                            <option>5</option>
+                                            <option>เลือกอำเภอ...</option>
+                                            <option>เมือง</option>
+                                            
                                         </Input>
                                     </Col>
                                 </Row>
+
                                 <Row>
                                     <Col md="4">
                                         <Label for="exampleSelect">
@@ -364,12 +353,11 @@ class Ainformation extends PureComponent {
                                             name="select"
                                             bsSize="sm"
                                         >
-                                            <option>select..</option>
-                                            <option>1</option>
-                                            <option>2</option>
-                                            <option>3</option>
-                                            <option>4</option>
-                                            <option>5</option>
+                                            <option>เลือกตำบล...</option>
+                                            <option>ในเมือง</option>
+                                            <option>สุรนารี</option>
+                                            <option>ลำปลายมาศ</option>
+                                            
                                         </Input>
                                     </Col>
                                     <Col md="4">
@@ -377,16 +365,11 @@ class Ainformation extends PureComponent {
                                             รหัสไปรษณีย์
                                         </Label>
                                         <Input
-                                            type="select"
+                                            type="number"
                                             name="select"
                                             bsSize="sm"
                                         >
-                                            <option>select..</option>
-                                            <option>1</option>
-                                            <option>2</option>
-                                            <option>3</option>
-                                            <option>4</option>
-                                            <option>5</option>
+                                            
                                         </Input>
                                     </Col>
                                 </Row>
@@ -405,12 +388,10 @@ class Ainformation extends PureComponent {
                                             name="select"
                                             bsSize="sm"
                                         >
-                                            <option>select..</option>
-                                            <option>1</option>
-                                            <option>2</option>
-                                            <option>3</option>
-                                            <option>4</option>
-                                            <option>5</option>
+                                            <option>เลือก...</option>
+                                            <option>อาศัยอยู่นอกเขตรับผิดชอบเเละเข้ามารับบริการ</option>
+                                            <option>อาศัยอยู่ในเขตรับผิดชอบเเละเข้ามารับบริการ</option>
+                                            
                                         </Input>
                                     </Col>
                                 </Row>
@@ -433,12 +414,11 @@ class Ainformation extends PureComponent {
                                             name="select"
                                             bsSize="sm"
                                         >
-                                            <option>select..</option>
-                                            <option>1</option>
-                                            <option>2</option>
-                                            <option>3</option>
-                                            <option>4</option>
-                                            <option>5</option>
+                                            <option>เลือกคำนำหน้า...</option>
+                                            <option>นาย</option>
+                                            <option>นาง</option>
+                                            <option>นางสาว</option>
+                                            
                                         </Input>
                                     </Col>
                                     <Col md="3">
@@ -472,12 +452,15 @@ class Ainformation extends PureComponent {
                                             name="select"
                                             bsSize="sm"
                                         >
-                                            <option>select..</option>
-                                            <option>1</option>
-                                            <option>2</option>
-                                            <option>3</option>
-                                            <option>4</option>
-                                            <option>5</option>
+                                            <option>เลือก...</option>
+                                            <option>พ่อ</option>
+                                            <option>แม่</option>
+                                            <option>พี่</option>
+                                            <option>น้อง</option>
+                                            <option>ลุง</option>
+                                            <option>ป้า</option>
+                                            <option>น้า</option>
+                                            <option>อา</option>
                                         </Input>
                                     </Col>
                                 </Row>
@@ -523,12 +506,10 @@ class Ainformation extends PureComponent {
                                             name="select"
                                             bsSize="sm"
                                         >
-                                            <option>select..</option>
-                                            <option>1</option>
-                                            <option>2</option>
-                                            <option>3</option>
-                                            <option>4</option>
-                                            <option>5</option>
+                                            <option>เลือก...</option>
+                                            <option>มาก</option>
+                                            <option>มากที่สุด</option>
+                                            
                                         </Input>
                                     </Col>
                                 </Row>
@@ -567,7 +548,7 @@ class Ainformation extends PureComponent {
 
                                 <Row>
                                     <Col md="4">
-                                        <Label for="exampleSelect">
+                                    <Label for="exampleSelect">
                                             จังหวัด
                                         </Label>
                                         <Input
@@ -575,12 +556,12 @@ class Ainformation extends PureComponent {
                                             name="select"
                                             bsSize="sm"
                                         >
-                                            <option>select..</option>
-                                            <option>1</option>
-                                            <option>2</option>
-                                            <option>3</option>
-                                            <option>4</option>
-                                            <option>5</option>
+                                            <option>เลือกจังหวัด...</option>
+                                            <option>บุรีรัมย์</option>
+                                            <option>นครราชสีมา</option>
+                                            <option>หนองคาย</option>
+                                            <option>จันทบุรี</option>
+                                            <option>ราชบุรี</option>
                                         </Input>
                                     </Col>
                                     <Col md="4">
@@ -590,15 +571,13 @@ class Ainformation extends PureComponent {
                                             name="select"
                                             bsSize="sm"
                                         >
-                                            <option>select..</option>
-                                            <option>1</option>
-                                            <option>2</option>
-                                            <option>3</option>
-                                            <option>4</option>
-                                            <option>5</option>
+                                            <option>เลือกอำเภอ...</option>
+                                            <option>เมือง</option>
+                                            
                                         </Input>
                                     </Col>
                                 </Row>
+
                                 <Row>
                                     <Col md="4">
                                         <Label for="exampleSelect">
@@ -609,12 +588,11 @@ class Ainformation extends PureComponent {
                                             name="select"
                                             bsSize="sm"
                                         >
-                                            <option>select..</option>
-                                            <option>1</option>
-                                            <option>2</option>
-                                            <option>3</option>
-                                            <option>4</option>
-                                            <option>5</option>
+                                            <option>เลือกตำบล...</option>
+                                            <option>ในเมือง</option>
+                                            <option>สุรนารี</option>
+                                            <option>ลำปลายมาศ</option>
+                                            
                                         </Input>
                                     </Col>
                                     <Col md="4">
@@ -622,16 +600,11 @@ class Ainformation extends PureComponent {
                                             รหัสไปรษณีย์
                                         </Label>
                                         <Input
-                                            type="select"
+                                            type="number"
                                             name="select"
                                             bsSize="sm"
                                         >
-                                            <option>select..</option>
-                                            <option>1</option>
-                                            <option>2</option>
-                                            <option>3</option>
-                                            <option>4</option>
-                                            <option>5</option>
+                                            
                                         </Input>
                                     </Col>
                                 </Row>

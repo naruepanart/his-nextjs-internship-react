@@ -138,12 +138,9 @@ class Binformation extends PureComponent {
                                                 name="select"
                                                 bsSize="sm"
                                             >
-                                                <option>select..</option>
-                                                <option>1</option>
-                                                <option>2</option>
-                                                <option>3</option>
-                                                <option>4</option>
-                                                <option>5</option>
+                                                <option>เลือก...</option>
+                                                <option>มหาวิทยาลัยเทคโนโลยีสุรนารี</option>
+                                                
                                             </Input>
                                         </Col>
                                         <Col md="4">
@@ -155,12 +152,10 @@ class Binformation extends PureComponent {
                                                 name="select"
                                                 bsSize="sm"
                                             >
-                                                <option>select..</option>
-                                                <option>1</option>
-                                                <option>2</option>
-                                                <option>3</option>
-                                                <option>4</option>
-                                                <option>5</option>
+                                                <option>เลือกสาขาวิชา...</option>
+                                                <option>วิศวกรรมศาสตร์</option>
+                                                <option>เทคโนโลยีสารสนเทศ</option>
+                                               
                                             </Input>
                                         </Col>
                                         <Col md="4">
@@ -172,12 +167,10 @@ class Binformation extends PureComponent {
                                                 name="select"
                                                 bsSize="sm"
                                             >
-                                                <option>select..</option>
-                                                <option>1</option>
-                                                <option>2</option>
-                                                <option>3</option>
-                                                <option>4</option>
-                                                <option>5</option>
+                                                <option>เลือก...</option>
+                                                <option>วิศวกรรมคอมพิวเตอร์</option>
+                                                <option>IT</option>
+                                                
                                             </Input>
                                         </Col>
                                     </Row>
@@ -188,16 +181,11 @@ class Binformation extends PureComponent {
                                                 รหัส นศ./รหัส พนง.
                                             </Label>
                                             <Input
-                                                type="select"
+                                                type="number"
                                                 name="select"
                                                 bsSize="sm"
                                             >
-                                                <option>select..</option>
-                                                <option>1</option>
-                                                <option>2</option>
-                                                <option>3</option>
-                                                <option>4</option>
-                                                <option>5</option>
+                                             
                                             </Input>
                                         </Col>
                                         <Col md="2">
@@ -240,12 +228,9 @@ class Binformation extends PureComponent {
                                                 name="select"
                                                 bsSize="sm"
                                             >
-                                                <option>select..</option>
-                                                <option>1</option>
-                                                <option>2</option>
-                                                <option>3</option>
-                                                <option>4</option>
-                                                <option>5</option>
+                                                <option>เลือก...</option>
+                                                <option>มหาวิทยาลัยเทคโนโลยีสุรนารี</option>
+                                                
                                             </Input>
                                         </Col>
                                         <Col md="4">
@@ -257,12 +242,10 @@ class Binformation extends PureComponent {
                                                 name="select"
                                                 bsSize="sm"
                                             >
-                                                <option>select..</option>
-                                                <option>1</option>
-                                                <option>2</option>
-                                                <option>3</option>
-                                                <option>4</option>
-                                                <option>5</option>
+                                                <option>เลือก...</option>
+                                                <option>วิศวกรรมศาสตร์</option>
+                                                <option>เทคโนโลยีสารสนเทศ</option>
+                                                
                                             </Input>
                                         </Col>
                                         <Col md="4">
@@ -274,12 +257,10 @@ class Binformation extends PureComponent {
                                                 name="select"
                                                 bsSize="sm"
                                             >
-                                                <option>select..</option>
-                                                <option>1</option>
-                                                <option>2</option>
-                                                <option>3</option>
-                                                <option>4</option>
-                                                <option>5</option>
+                                                <option>เลือก...</option>
+                                                <option>วิศวกรรมคอมพิวเตอร์</option>
+                                                <option>IT</option>
+                                                
                                             </Input>
                                         </Col>
                                     </Row>
@@ -314,12 +295,15 @@ class Binformation extends PureComponent {
                                                 name="select"
                                                 bsSize="sm"
                                             >
-                                                <option>select..</option>
-                                                <option>1</option>
-                                                <option>2</option>
-                                                <option>3</option>
-                                                <option>4</option>
-                                                <option>5</option>
+                                                <option>เลือก...</option>
+                                                <option>พ่อ</option>
+                                                <option>แม่</option>
+                                                <option>พี่</option>
+                                                <option>น้อง</option>
+                                                <option>ลุง</option>
+                                                <option>ป้า</option>
+                                                <option>น้า</option>
+                                                <option>อา</option>
                                             </Input>
                                         </Col>
                                     </Row>
