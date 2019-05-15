@@ -15,7 +15,7 @@ import {
     Form,
 } from "reactstrap"
 import { VerticleButton as ScrollUpButton } from "react-scroll-up-button"
-import picture from "./static/picture.jpg"
+import picture from "../static/picture.jpg"
 import TabInRegister from "./TabInRegister"
 import CameraGG from "./CameraGG"
 
@@ -72,165 +72,153 @@ export default class Register extends PureComponent {
 
     render() {
         return (
-            <div className="wrapper">
-                <div className="container">
-                    <Row>
-                        <Col md="12">
-                            <Card>
-                                <Navbar
-                                    color="primary"
-                                    dark
-                                    className="py-md-0"
-                                >
-                                    <NavbarBrand href="#" style={fontSize18px}>
-                                        ทะเบียนผู้ป่วย
-                                    </NavbarBrand>
-                                </Navbar>
-                                <CardBody>
-                                    <Card>
-                                        <CardBody>
-                                            <Form>
-                                                <Row>
-                                                    <Col md="12">
-                                                        <Row>
-                                                            <Col md="2">
-                                                                <p>
-                                                                    {" "}
-                                                                    Hospital
-                                                                    Number :{" "}
-                                                                </p>
-                                                            </Col>
-                                                            <Col md="8">
-                                                                <Row>
-                                                                    <Col md="5">
-                                                                        <Input
-                                                                            type="text"
-                                                                            name="Search"
-                                                                            bsSize="sm"
-                                                                            placeholder="00000000"
-                                                                        />
-                                                                    </Col>
-                                                                    <Col />
-                                                                    <Col md="5">
-                                                                        <Input
-                                                                            type="text"
-                                                                            name="Search"
-                                                                            placeholder="ใส่ข้อความเพื่อค้นหา"
-                                                                            bsSize="sm"
-                                                                        />
-                                                                        <Row>
-                                                                            <Col />
-                                                                            <Col md="5">
-                                                                                <br />
-                                                                                <br />
-                                                                                <Button
-                                                                                    outline
-                                                                                    color="primary"
-                                                                                    size="sm"
-                                                                                    onClick={
-                                                                                        this
-                                                                                            .toggle
-                                                                                    }
-                                                                                >
-                                                                                    เปิดกล้อง
-                                                                                </Button>
-                                                                                <Modal
-                                                                                    isOpen={
-                                                                                        this
-                                                                                            .state
-                                                                                            .modal
-                                                                                    }
-                                                                                    toggle={
-                                                                                        this
-                                                                                            .toggle
-                                                                                    }
-                                                                                    className={
-                                                                                        this
-                                                                                            .props
-                                                                                            .className
-                                                                                    }
-                                                                                    size="lg"
-                                                                                >
-                                                                                    <ModalHeader>
-                                                                                        Picture
-                                                                                        Capture
-                                                                                    </ModalHeader>
-                                                                                    <ModalBody>
-                                                                                        <CameraGG />
-                                                                                    </ModalBody>
-                                                                                    <ModalFooter>
-                                                                                        <Button
-                                                                                            color="success"
-                                                                                            size="sm"
-                                                                                            onClick={
-                                                                                                this
-                                                                                                    .toggle
-                                                                                            }
-                                                                                        >
-                                                                                            OK
-                                                                                        </Button>
-                                                                                    </ModalFooter>
-                                                                                </Modal>
-                                                                                <Col md="2">
-                                                                                    <div className="imgPreview" />
-                                                                                </Col>
+            <div>
+                <Row>
+                    <Col md="12">
+                        <Card>
+                            <Navbar color="primary" dark className="py-md-0">
+                                <NavbarBrand href="#" style={fontSize18px}>
+                                    ทะเบียนผู้ป่วย
+                                </NavbarBrand>
+                            </Navbar>
+                            <CardBody>
+                                <Card>
+                                    <CardBody>
+                                        <Form>
+                                            <Row>
+                                                <Col md="12">
+                                                    <Row>
+                                                        <Col md="2">
+                                                            <p>
+                                                                {" "}
+                                                                Hospital Number
+                                                                :{" "}
+                                                            </p>
+                                                        </Col>
+                                                        <Col md="8">
+                                                            <Row>
+                                                                <Col md="5">
+                                                                    <Input
+                                                                        type="text"
+                                                                        name="Search"
+                                                                        bsSize="sm"
+                                                                        placeholder="00000000"
+                                                                    />
+                                                                </Col>
+                                                                <Col />
+                                                                <Col md="5">
+                                                                    <Input
+                                                                        type="text"
+                                                                        name="Search"
+                                                                        placeholder="ใส่ข้อความเพื่อค้นหา"
+                                                                        bsSize="sm"
+                                                                    />
+                                                                    <Row>
+                                                                        <Col />
+                                                                        <Col md="5">
+                                                                            <br />
+                                                                            <br />
+                                                                            <Button
+                                                                                outline
+                                                                                color="primary"
+                                                                                size="sm"
+                                                                                onClick={
+                                                                                    this
+                                                                                        .toggle
+                                                                                }
+                                                                            >
+                                                                                เปิดกล้อง
+                                                                            </Button>
+                                                                            <Modal
+                                                                                isOpen={
+                                                                                    this
+                                                                                        .state
+                                                                                        .modal
+                                                                                }
+                                                                                toggle={
+                                                                                    this
+                                                                                        .toggle
+                                                                                }
+                                                                                className={
+                                                                                    this
+                                                                                        .props
+                                                                                        .className
+                                                                                }
+                                                                                size="lg"
+                                                                            >
+                                                                                <ModalHeader>
+                                                                                    Picture
+                                                                                    Capture
+                                                                                </ModalHeader>
+                                                                                <ModalBody>
+                                                                                    <CameraGG />
+                                                                                </ModalBody>
+                                                                                <ModalFooter>
+                                                                                    <Button
+                                                                                        color="success"
+                                                                                        size="sm"
+                                                                                        onClick={
+                                                                                            this
+                                                                                                .toggle
+                                                                                        }
+                                                                                    >
+                                                                                        OK
+                                                                                    </Button>
+                                                                                </ModalFooter>
+                                                                            </Modal>
+                                                                            <Col md="2">
+                                                                                <div className="imgPreview" />
                                                                             </Col>
-                                                                        </Row>
-                                                                    </Col>
-                                                                </Row>
-                                                            </Col>
-                                                            <Col md="2">
-                                                                <img
-                                                                    width="195"
-                                                                    src={
-                                                                        picture
-                                                                    }
-                                                                    alt="logo"
-                                                                    className="img-thumbnail"
-                                                                />
-                                                            </Col>
-                                                        </Row>
-                                                        <Row>
-                                                            <Col md="2" />
-                                                            <Col md="7" />
-                                                        </Row>
-                                                    </Col>
-                                                </Row>
-                                            </Form>
-                                        </CardBody>
-                                    </Card>
-                                    <br />
+                                                                        </Col>
+                                                                    </Row>
+                                                                </Col>
+                                                            </Row>
+                                                        </Col>
+                                                        <Col md="2">
+                                                            <img
+                                                                width="195"
+                                                                src={picture}
+                                                                alt="logo"
+                                                                className="img-thumbnail"
+                                                            />
+                                                        </Col>
+                                                    </Row>
+                                                    <Row>
+                                                        <Col md="2" />
+                                                        <Col md="7" />
+                                                    </Row>
+                                                </Col>
+                                            </Row>
+                                        </Form>
+                                    </CardBody>
+                                </Card>
+                                <br />
 
-                                    <TabInRegister />
+                                <TabInRegister />
 
-                                    <br />
-                                    <Row>
-                                        <Col />
-                                        <Col />
-                                        <Button size="sm" color="success">
-                                            <i className="fas fa-save" /> บันทึก
-                                        </Button>
-                                        &nbsp;
-                                        <Button size="sm" color="danger">
-                                            <i className="fas fa-trash-alt" />{" "}
-                                            ลบรายการ
-                                        </Button>
-                                        &nbsp;
-                                        <Button
-                                            size="sm"
-                                            outline
-                                            color="danger"
-                                        >
-                                            <i className="fas fa-times" />{" "}
-                                            ยกเลิก
-                                        </Button>
-                                        &nbsp;
-                                    </Row>
-                                </CardBody>
-                            </Card>
-                        </Col>
-                    </Row>
-                </div>
+                                <br />
+                                <Row>
+                                    <Col />
+                                    <Col />
+                                    <Button size="sm" color="success">
+                                        <i className="fas fa-save" /> บันทึก
+                                    </Button>
+                                    &nbsp;
+                                    <Button size="sm" color="danger">
+                                        <i className="fas fa-trash-alt" />{" "}
+                                        ลบรายการ
+                                    </Button>
+                                    &nbsp;
+                                    <Button size="sm" outline color="danger">
+                                        <i className="fas fa-times" /> ยกเลิก
+                                    </Button>
+                                    &nbsp;
+                                </Row>
+                            </CardBody>
+                        </Card>
+                    </Col>
+                </Row>
+
                 <ScrollUpButton
                     StopPosition={0}
                     howAtPosition={150}

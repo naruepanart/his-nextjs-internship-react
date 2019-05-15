@@ -2,17 +2,17 @@ import React, { PureComponent } from "react"
 import Link from "next/link"
 import Head from "next/head"
 import { Navbar, NavbarBrand } from "reactstrap"
-import Regis from "./static/iconSetMainForm64_addPatient.png"
-import SendP from "./static/iconSetMainForm64_sendPatient.png"
-import Nurse from "./static/iconSetMainForm64_nurse-04.png"
-import Doc from "./static/iconSetMainForm64_doctor.png"
-import Drug from "./static/iconSetMainForm64_drug.png"
-import Xray from "./static/iconSetMainForm64_xray-15.png"
-import Coin from "./static/iconSetMainForm64_coin.png"
-import Manage from "./static/iconSetMainForm64_calendar.png"
+import Regis from "../static/iconSetMainForm64_addPatient.png"
+import SendP from "../static/iconSetMainForm64_sendPatient.png"
+import Nurse from "../static/iconSetMainForm64_nurse-04.png"
+import Doc from "../static/iconSetMainForm64_doctor.png"
+import Drug from "../static/iconSetMainForm64_drug.png"
+import Xray from "../static/iconSetMainForm64_xray-15.png"
+import Coin from "../static/iconSetMainForm64_coin.png"
+import Manage from "../static/iconSetMainForm64_calendar.png"
 
-const fontSize18px = {
-    fontSize: "18px",
+const fontSize12px = {
+    fontSize: "12px",
 }
 
 export default class MenuTopMain extends PureComponent {
@@ -29,7 +29,7 @@ export default class MenuTopMain extends PureComponent {
                 </Head>
 
                 <Navbar color="primary" dark className="py-md-0">
-                    <NavbarBrand href="/" style={fontSize18px}>
+                    <NavbarBrand href="/" style={fontSize12px}>
                         HIS
                     </NavbarBrand>
                 </Navbar>
