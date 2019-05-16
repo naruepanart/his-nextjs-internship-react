@@ -76,7 +76,7 @@ class Examination extends PureComponent {
                             data-small="true"
                             data-cls-bar="bg-orange"
                         />
-                        <CardHeader>Header!!!</CardHeader>
+                        <CardHeader>Header</CardHeader>
                         <Table bordered>
                             <thead>
                                 <tr>
