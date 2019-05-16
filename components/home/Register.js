@@ -1,4 +1,4 @@
-import React, { PureComponent } from "react"
+import React, { Component } from "react"
 import {
     Row,
     Col,
@@ -23,7 +23,7 @@ const fontSize18px = {
     fontSize: "18px",
 }
 
-export default class Register extends PureComponent {
+export default class Register extends Component {
     constructor(props) {
         super(props)
         this.state = {
@@ -72,7 +72,7 @@ export default class Register extends PureComponent {
 
     render() {
         return (
-            <div>
+            <React.Fragment>
                 <Row>
                     <Col md="12">
                         <Card>
@@ -90,7 +90,6 @@ export default class Register extends PureComponent {
                                                     <Row>
                                                         <Col md="2">
                                                             <p>
-                                                                {" "}
                                                                 Hospital Number
                                                                 :{" "}
                                                             </p>
@@ -198,21 +197,27 @@ export default class Register extends PureComponent {
 
                                 <br />
                                 <Row>
-                                    <Col />
-                                    <Col />
-                                    <Button size="sm" color="success">
-                                        <i className="fas fa-save" /> บันทึก
-                                    </Button>
-                                    &nbsp;
-                                    <Button size="sm" color="danger">
-                                        <i className="fas fa-trash-alt" />{" "}
-                                        ลบรายการ
-                                    </Button>
-                                    &nbsp;
-                                    <Button size="sm" outline color="danger">
-                                        <i className="fas fa-times" /> ยกเลิก
-                                    </Button>
-                                    &nbsp;
+                                    <Col md="9" />
+                                    <Col md="3">
+                                        <Button size="sm" color="success">
+                                            <i className="fas fa-save" /> บันทึก
+                                        </Button>
+                                        &nbsp;
+                                        <Button size="sm" color="danger">
+                                            <i className="fas fa-trash-alt" />{" "}
+                                            ลบรายการ
+                                        </Button>
+                                        &nbsp;
+                                        <Button
+                                            size="sm"
+                                            outline
+                                            color="danger"
+                                        >
+                                            <i className="fas fa-times" />{" "}
+                                            ยกเลิก
+                                        </Button>
+                                        &nbsp;
+                                    </Col>
                                 </Row>
                             </CardBody>
                         </Card>
@@ -229,7 +234,7 @@ export default class Register extends PureComponent {
                     style={{}}
                     ToggledStyle={{}}
                 />
-            </div>
+            </React.Fragment>
         )
     }
 }

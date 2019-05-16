@@ -18,7 +18,7 @@ const fontSize12px = {
 export default class MenuTopMain extends PureComponent {
     render() {
         return (
-            <div>
+            <React.Fragment>
                 <Head>
                     <link
                         rel="stylesheet"
@@ -199,7 +199,7 @@ export default class MenuTopMain extends PureComponent {
                 <div>
                     {this.props.children}
                 </div>
-            </div>
+            </React.Fragment>
         )
     }
 }

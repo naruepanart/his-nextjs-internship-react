@@ -1,4 +1,4 @@
-import React, { PureComponent } from "react"
+import React, { Component } from "react"
 import {
     TabContent,
     TabPane,
@@ -30,7 +30,7 @@ const fontSize14px = {
     fontSize: "14px",
 }
 
-export default class TabInRegister extends PureComponent {
+export default class TabInRegister extends Component {
     constructor(props) {
         super(props)
 

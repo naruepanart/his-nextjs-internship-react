@@ -1,4 +1,4 @@
-import React, { PureComponent } from "react"
+import React, { Component } from "react"
 import Head from "next/head"
 import {
     Navbar,
@@ -22,7 +22,7 @@ const height500px = {
     height: "500px",
 }
 
-class Examination extends PureComponent {
+class Examination extends Component {
     constructor(props) {
         super(props)
         this.state = {

@@ -1,4 +1,4 @@
-import React, { PureComponent } from "react"
+import React, { Component } from "react"
 import {
     Row,
     Col,
@@ -213,7 +213,7 @@ const options3 = {
     ],
 }
 
-export default class Sendpatient extends PureComponent {
+export default class Sendpatient extends Component {
     constructor(props) {
         super(props)
         this.state = {
@@ -267,7 +267,7 @@ export default class Sendpatient extends PureComponent {
 
     render() {
         return (
-            <div>
+            <React.Fragment>
                 <Row>
                     <Col md="12">
                         <Card>
@@ -933,21 +933,27 @@ export default class Sendpatient extends PureComponent {
                                 </div>
                                 <br />
                                 <Row>
-                                    <Col />
-                                    <Col />
-                                    <Button size="sm" color="success">
-                                        <i className="fas fa-save" /> บันทึก
-                                    </Button>
-                                    &nbsp;
-                                    <Button size="sm" color="danger">
-                                        <i className="fas fa-trash-alt" />{" "}
-                                        ลบรายการ
-                                    </Button>
-                                    &nbsp;
-                                    <Button size="sm" outline color="danger">
-                                        <i className="fas fa-times" /> ยกเลิก
-                                    </Button>
-                                    &nbsp;
+                                    <Col md="9" />
+                                    <Col md="3">
+                                        <Button size="sm" color="success">
+                                            <i className="fas fa-save" /> บันทึก
+                                        </Button>
+                                        &nbsp;
+                                        <Button size="sm" color="danger">
+                                            <i className="fas fa-trash-alt" />{" "}
+                                            ลบรายการ
+                                        </Button>
+                                        &nbsp;
+                                        <Button
+                                            size="sm"
+                                            outline
+                                            color="danger"
+                                        >
+                                            <i className="fas fa-times" />{" "}
+                                            ยกเลิก
+                                        </Button>
+                                        &nbsp;
+                                    </Col>
                                 </Row>
                             </CardBody>
                         </Card>
@@ -964,7 +970,7 @@ export default class Sendpatient extends PureComponent {
                     style={{}}
                     ToggledStyle={{}}
                 />
-            </div>
+            </React.Fragment>
         )
     }
 }

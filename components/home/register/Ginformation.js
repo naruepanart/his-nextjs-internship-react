@@ -1,4 +1,4 @@
-import React, { PureComponent } from "react"
+import React, { Component } from "react"
 import {
     Row,
     Col,
@@ -101,7 +101,7 @@ const options1 = {
     ],
 }
 
-class Ginformation extends PureComponent {
+class Ginformation extends Component {
     constructor(props) {
         super(props)
         this.state = {

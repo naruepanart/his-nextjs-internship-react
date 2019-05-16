@@ -1,4 +1,4 @@
-import React, { PureComponent } from "react"
+import React, { Component } from "react"
 import {
     Button,
     Card,
@@ -99,7 +99,7 @@ const options1 = {
     ],
 }
 
-class Cinformation extends PureComponent {
+class Cinformation extends Component {
     constructor(props) {
         super(props)
         this.state = {

@@ -1,4 +1,4 @@
-import React, { PureComponent } from "react"
+import React, { Component } from "react"
 import {
     Button,
     Card,
@@ -177,7 +177,7 @@ const options2 = {
     ],
 }
 
-class Pinformation extends PureComponent {
+class Pinformation extends Component {
     constructor(props) {
         super(props)
         this.state = {

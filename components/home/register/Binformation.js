@@ -1,4 +1,4 @@
-import React, { PureComponent } from "react"
+import React, { Component } from "react"
 import {
     Row,
     Col,
@@ -95,7 +95,7 @@ const options1 = {
     ],
 }
 
-class Binformation extends PureComponent {
+class Binformation extends Component {
     constructor(props) {
         super(props)
         this.state = {
@@ -130,6 +130,7 @@ class Binformation extends PureComponent {
                                 <CardBody>
                                     <Row form>
                                         <Col md="4">
+                                        <FormGroup>
                                             <Label for="exampleSelect">
                                                 สำนัก/สังกัด
                                             </Label>
@@ -142,6 +143,7 @@ class Binformation extends PureComponent {
                                                 <option>มหาวิทยาลัยเทคโนโลยีสุรนารี</option>
                                                 
                                             </Input>
+                                                </FormGroup>
                                         </Col>
                                         <Col md="4">
                                             <Label for="exampleSelect">
@@ -220,6 +222,8 @@ class Binformation extends PureComponent {
                                 <CardBody>
                                     <Row form>
                                         <Col md="4">
+                                        <FormGroup>
+
                                             <Label for="exampleSelect">
                                                 สังกัด
                                             </Label>
@@ -232,6 +236,7 @@ class Binformation extends PureComponent {
                                                 <option>มหาวิทยาลัยเทคโนโลยีสุรนารี</option>
                                                 
                                             </Input>
+                                                </FormGroup>
                                         </Col>
                                         <Col md="4">
                                             <Label for="exampleSelect">

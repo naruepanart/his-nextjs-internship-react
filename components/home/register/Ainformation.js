@@ -1,4 +1,4 @@
-import React , { PureComponent } from "react"
+import React, { Component } from "react"
 import {
     Row,
     Col,
@@ -32,12 +32,12 @@ const columns1 = [
         sort: true,
     },
     {
-        dataField: "authority",
+        dataField: "lastname",
         text: "สกุล",
         sort: true,
     },
     {
-        dataField: "doctor",
+        dataField: "address",
         text: "ที่อยู่",
         sort: true,
     },
@@ -73,10 +73,15 @@ const { SearchBar } = Search
 const rows1 = [
     {
         id: "0",
-        name: "name",
-        authority: "1",
-        doctor: "doctor",
+        firstname: "firstname",
+        lastname: "lastname",
+        address: "address",
         location: "thailand",
+        relationship:"relationship",
+        telnumber:"telnumber",
+        telnumberhome:"telnumberhome",
+        telnumberwork:"telnumberwork",
+        priority:"priority"
     },
 ]
 
@@ -121,7 +126,7 @@ const options1 = {
     ],
 }
 
-class Ainformation extends PureComponent {
+class Ainformation extends Component {
     constructor(props) {
         super(props)
         this.state = {
@@ -203,52 +208,58 @@ class Ainformation extends PureComponent {
 
                                 <Row>
                                     <Col md="4">
-                                        <Label for="exampleSelect">
-                                            จังหวัด
-                                        </Label>
-                                        <Input
-                                            type="select"
-                                            name="select"
-                                            bsSize="sm"
-                                        >
-                                            <option>เลือกจังหวัด...</option>
-                                            <option>บุรีรัมย์</option>
-                                            <option>นครราชสีมา</option>
-                                            <option>หนองคาย</option>
-                                            <option>จันทบุรี</option>
-                                            <option>ราชบุรี</option>
-                                        </Input>
+                                        <FormGroup>
+                                            <Label for="exampleSelect">
+                                                จังหวัด
+                                            </Label>
+                                            <Input
+                                                type="select"
+                                                name="select"
+                                                bsSize="sm"
+                                            >
+                                                <option>เลือกจังหวัด...</option>
+                                                <option>บุรีรัมย์</option>
+                                                <option>นครราชสีมา</option>
+                                                <option>หนองคาย</option>
+                                                <option>จันทบุรี</option>
+                                                <option>ราชบุรี</option>
+                                            </Input>
+                                        </FormGroup>
                                     </Col>
                                     <Col md="4">
-                                        <Label for="exampleSelect">อำเภอ</Label>
-                                        <Input
-                                            type="select"
-                                            name="select"
-                                            bsSize="sm"
-                                        >
-                                            <option>เลือกอำเภอ...</option>
-                                            <option>เมือง</option>
-                                            
-                                        </Input>
+                                        <FormGroup>
+                                            <Label for="exampleSelect">
+                                                อำเภอ
+                                            </Label>
+                                            <Input
+                                                type="select"
+                                                name="select"
+                                                bsSize="sm"
+                                            >
+                                                <option>เลือกอำเภอ...</option>
+                                                <option>เมือง</option>
+                                            </Input>
+                                        </FormGroup>
                                     </Col>
                                 </Row>
 
                                 <Row>
                                     <Col md="4">
-                                        <Label for="exampleSelect">
-                                            ตำบล/เขต
-                                        </Label>
-                                        <Input
-                                            type="select"
-                                            name="select"
-                                            bsSize="sm"
-                                        >
-                                            <option>เลือกตำบล...</option>
-                                            <option>ในเมือง</option>
-                                            <option>สุรนารี</option>
-                                            <option>ลำปลายมาศ</option>
-                                            
-                                        </Input>
+                                        <FormGroup>
+                                            <Label for="exampleSelect">
+                                                ตำบล/เขต
+                                            </Label>
+                                            <Input
+                                                type="select"
+                                                name="select"
+                                                bsSize="sm"
+                                            >
+                                                <option>เลือกตำบล...</option>
+                                                <option>ในเมือง</option>
+                                                <option>สุรนารี</option>
+                                                <option>ลำปลายมาศ</option>
+                                            </Input>
+                                        </FormGroup>
                                     </Col>
                                     <Col md="4">
                                         <Label for="exampleSelect">
@@ -258,9 +269,7 @@ class Ainformation extends PureComponent {
                                             type="number"
                                             name="select"
                                             bsSize="sm"
-                                        >
-                                            
-                                        </Input>
+                                        />
                                     </Col>
                                 </Row>
                             </CardBody>
@@ -313,7 +322,7 @@ class Ainformation extends PureComponent {
 
                                 <Row>
                                     <Col md="4">
-                                    <Label for="exampleSelect">
+                                        <Label for="exampleSelect">
                                             จังหวัด
                                         </Label>
                                         <Input
@@ -330,47 +339,51 @@ class Ainformation extends PureComponent {
                                         </Input>
                                     </Col>
                                     <Col md="4">
-                                        <Label for="exampleSelect">อำเภอ</Label>
-                                        <Input
-                                            type="select"
-                                            name="select"
-                                            bsSize="sm"
-                                        >
-                                            <option>เลือกอำเภอ...</option>
-                                            <option>เมือง</option>
-                                            
-                                        </Input>
+                                        <FormGroup>
+                                            <Label for="exampleSelect">
+                                                อำเภอ
+                                            </Label>
+                                            <Input
+                                                type="select"
+                                                name="select"
+                                                bsSize="sm"
+                                            >
+                                                <option>เลือกอำเภอ...</option>
+                                                <option>เมือง</option>
+                                            </Input>
+                                        </FormGroup>
                                     </Col>
                                 </Row>
 
                                 <Row>
                                     <Col md="4">
-                                        <Label for="exampleSelect">
-                                            ตำบล/เขต
-                                        </Label>
-                                        <Input
-                                            type="select"
-                                            name="select"
-                                            bsSize="sm"
-                                        >
-                                            <option>เลือกตำบล...</option>
-                                            <option>ในเมือง</option>
-                                            <option>สุรนารี</option>
-                                            <option>ลำปลายมาศ</option>
-                                            
-                                        </Input>
+                                        <FormGroup>
+                                            <Label for="exampleSelect">
+                                                ตำบล/เขต
+                                            </Label>
+                                            <Input
+                                                type="select"
+                                                name="select"
+                                                bsSize="sm"
+                                            >
+                                                <option>เลือกตำบล...</option>
+                                                <option>ในเมือง</option>
+                                                <option>สุรนารี</option>
+                                                <option>ลำปลายมาศ</option>
+                                            </Input>
+                                        </FormGroup>
                                     </Col>
                                     <Col md="4">
-                                        <Label for="exampleSelect">
-                                            รหัสไปรษณีย์
-                                        </Label>
-                                        <Input
-                                            type="number"
-                                            name="select"
-                                            bsSize="sm"
-                                        >
-                                            
-                                        </Input>
+                                        <FormGroup>
+                                            <Label for="exampleSelect">
+                                                รหัสไปรษณีย์
+                                            </Label>
+                                            <Input
+                                                type="number"
+                                                name="select"
+                                                bsSize="sm"
+                                            />
+                                        </FormGroup>
                                     </Col>
                                 </Row>
                             </CardBody>
@@ -389,9 +402,12 @@ class Ainformation extends PureComponent {
                                             bsSize="sm"
                                         >
                                             <option>เลือก...</option>
-                                            <option>อาศัยอยู่นอกเขตรับผิดชอบเเละเข้ามารับบริการ</option>
-                                            <option>อาศัยอยู่ในเขตรับผิดชอบเเละเข้ามารับบริการ</option>
-                                            
+                                            <option>
+                                                อาศัยอยู่นอกเขตรับผิดชอบเเละเข้ามารับบริการ
+                                            </option>
+                                            <option>
+                                                อาศัยอยู่ในเขตรับผิดชอบเเละเข้ามารับบริการ
+                                            </option>
                                         </Input>
                                     </Col>
                                 </Row>
@@ -418,7 +434,6 @@ class Ainformation extends PureComponent {
                                             <option>นาย</option>
                                             <option>นาง</option>
                                             <option>นางสาว</option>
-                                            
                                         </Input>
                                     </Col>
                                     <Col md="3">
@@ -509,7 +524,6 @@ class Ainformation extends PureComponent {
                                             <option>เลือก...</option>
                                             <option>มาก</option>
                                             <option>มากที่สุด</option>
-                                            
                                         </Input>
                                     </Col>
                                 </Row>
@@ -548,52 +562,58 @@ class Ainformation extends PureComponent {
 
                                 <Row>
                                     <Col md="4">
-                                    <Label for="exampleSelect">
-                                            จังหวัด
-                                        </Label>
-                                        <Input
-                                            type="select"
-                                            name="select"
-                                            bsSize="sm"
-                                        >
-                                            <option>เลือกจังหวัด...</option>
-                                            <option>บุรีรัมย์</option>
-                                            <option>นครราชสีมา</option>
-                                            <option>หนองคาย</option>
-                                            <option>จันทบุรี</option>
-                                            <option>ราชบุรี</option>
-                                        </Input>
+                                        <FormGroup>
+                                            <Label for="exampleSelect">
+                                                จังหวัด
+                                            </Label>
+                                            <Input
+                                                type="select"
+                                                name="select"
+                                                bsSize="sm"
+                                            >
+                                                <option>เลือกจังหวัด...</option>
+                                                <option>บุรีรัมย์</option>
+                                                <option>นครราชสีมา</option>
+                                                <option>หนองคาย</option>
+                                                <option>จันทบุรี</option>
+                                                <option>ราชบุรี</option>
+                                            </Input>
+                                        </FormGroup>
                                     </Col>
                                     <Col md="4">
-                                        <Label for="exampleSelect">อำเภอ</Label>
-                                        <Input
-                                            type="select"
-                                            name="select"
-                                            bsSize="sm"
-                                        >
-                                            <option>เลือกอำเภอ...</option>
-                                            <option>เมือง</option>
-                                            
-                                        </Input>
+                                        <FormGroup>
+                                            <Label for="exampleSelect">
+                                                อำเภอ
+                                            </Label>
+                                            <Input
+                                                type="select"
+                                                name="select"
+                                                bsSize="sm"
+                                            >
+                                                <option>เลือกอำเภอ...</option>
+                                                <option>เมือง</option>
+                                            </Input>
+                                        </FormGroup>
                                     </Col>
                                 </Row>
 
                                 <Row>
                                     <Col md="4">
-                                        <Label for="exampleSelect">
-                                            ตำบล/เขต
-                                        </Label>
-                                        <Input
-                                            type="select"
-                                            name="select"
-                                            bsSize="sm"
-                                        >
-                                            <option>เลือกตำบล...</option>
-                                            <option>ในเมือง</option>
-                                            <option>สุรนารี</option>
-                                            <option>ลำปลายมาศ</option>
-                                            
-                                        </Input>
+                                        <FormGroup>
+                                            <Label for="exampleSelect">
+                                                ตำบล/เขต
+                                            </Label>
+                                            <Input
+                                                type="select"
+                                                name="select"
+                                                bsSize="sm"
+                                            >
+                                                <option>เลือกตำบล...</option>
+                                                <option>ในเมือง</option>
+                                                <option>สุรนารี</option>
+                                                <option>ลำปลายมาศ</option>
+                                            </Input>
+                                        </FormGroup>
                                     </Col>
                                     <Col md="4">
                                         <Label for="exampleSelect">
@@ -603,9 +623,7 @@ class Ainformation extends PureComponent {
                                             type="number"
                                             name="select"
                                             bsSize="sm"
-                                        >
-                                            
-                                        </Input>
+                                        />
                                     </Col>
                                 </Row>
                                 <Row>
