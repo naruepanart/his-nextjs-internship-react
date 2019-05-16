@@ -17,6 +17,7 @@
     "axios": "^0.18.0",
     "next": "^8.1.0",
     "next-compose-plugins": "^2.2.0",
+    "next-fonts": "^0.17.0",
     "next-images": "^1.1.1",
     "react": "^16.8.6",
     "react-bootstrap-table-next": "^3.1.1",
