@@ -90,7 +90,12 @@ export default class Examination extends Component {
                             data-small="true"
                             data-cls-bar="bg-orange"
                         />
-                        <CardHeader>Header</CardHeader>
+
+                        <Navbar color="primary" dark className="py-md-0">
+                            <NavbarBrand href="" style={fontSize16px}>
+                                ห้องตรวจ
+                            </NavbarBrand>
+                        </Navbar>
                         <Table bordered>
                             <thead>
                                 <tr>
@@ -123,8 +128,8 @@ export default class Examination extends Component {
                                                     >
                                                         Edit
                                                     </p>
-                                                    <Modal  
-                                                        size="lg"
+                                                    <Modal
+                                                        size="xl"
                                                         isOpen={
                                                             this.state.modal
                                                         }
@@ -133,7 +138,7 @@ export default class Examination extends Component {
                                                             this.props.className
                                                         }
                                                     >
-                                                        <ModalHeader 
+                                                        <ModalHeader
                                                             toggle={
                                                                 this.toggle3
                                                             }
@@ -141,9 +146,7 @@ export default class Examination extends Component {
                                                         >
                                                             Modal title
                                                         </ModalHeader>
-                                                        <ModalBody
-                                                           
-                                                        >
+                                                        <ModalBody>
                                                             <Tabs />
                                                         </ModalBody>
                                                     </Modal>
@@ -166,7 +169,11 @@ export default class Examination extends Component {
                             data-small="true"
                             data-cls-bar="bg-green"
                         />
-                        <CardHeader>Header</CardHeader>
+                        <Navbar color="primary" dark className="py-md-0">
+                            <NavbarBrand href="" style={fontSize16px}>
+                                กำลังตรวจ
+                            </NavbarBrand>
+                        </Navbar>
                         <Table bordered>
                             <thead>
                                 <tr>
@@ -209,7 +216,11 @@ export default class Examination extends Component {
                             data-small="true"
                             data-cls-bar="bg-pink"
                         />
-                        <CardHeader>Header</CardHeader>
+                        <Navbar color="primary" dark className="py-md-0">
+                            <NavbarBrand href="" style={fontSize16px}>
+                                ตรวจแล้ว
+                            </NavbarBrand>
+                        </Navbar>
                         <Table bordered>
                             <thead>
                                 <tr>

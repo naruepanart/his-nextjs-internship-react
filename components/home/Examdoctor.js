@@ -202,7 +202,7 @@ export default class Examdoctor extends Component {
                                                                         Edit
                                                                     </p>
                                                                     <Modal
-                                                                        size="lg"
+                                                                        size="xl"
                                                                         isOpen={
                                                                             this
                                                                                 .state
