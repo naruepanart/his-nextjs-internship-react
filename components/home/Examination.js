@@ -9,7 +9,16 @@ import {
     DropdownMenu,
     DropdownItem,
     CardHeader,
+    Modal,
+    ModalHeader,
+    ModalBody,
 } from "reactstrap"
+
+import dynamic from "next/dynamic"
+
+const Tabs = dynamic(() => import("../screening-detail-feature/Tabs"), {
+    ssr: false,
+})
 
 const fontSize16px = {
     fontSize: "16px",
@@ -22,13 +31,14 @@ const height500px = {
     height: "500px",
 }
 
-class Examination extends Component {
+export default class Examination extends Component {
     constructor(props) {
         super(props)
         this.state = {
             dropdownOpen: false,
             dropdownOpen1: false,
             dropdownOpen2: false,
+            modal: false,
         }
     }
 
@@ -47,6 +57,11 @@ class Examination extends Component {
             dropdownOpen2: !prevState.dropdownOpen2,
         }))
     }
+    toggle3 = () => {
+        this.setState(prevState => ({
+            modal: !prevState.modal,
+        }))
+    }
 
     render() {
         return (
@@ -63,8 +78,7 @@ class Examination extends Component {
 
                 <Navbar color="primary" dark className="py-md-0">
                     <NavbarBrand href="/" style={fontSize16px}>
-                    <i className="fas fa-map-marker-alt"></i> &nbsp;
-                        ห้องตรวจ
+                        <i className="fas fa-map-marker-alt" /> &nbsp; ห้องตรวจ
                     </NavbarBrand>
                 </Navbar>
 
@@ -103,67 +117,39 @@ class Examination extends Component {
                                             </DropdownToggle>
                                             <DropdownMenu>
                                                 <DropdownItem>
-                                                    Waiting...
+                                                    <p
+                                                        color="danger"
+                                                        onClick={this.toggle3}
+                                                    >
+                                                        Edit
+                                                    </p>
+                                                    <Modal  
+                                                        size="lg"
+                                                        isOpen={
+                                                            this.state.modal
+                                                        }
+                                                        toggle={this.toggle3}
+                                                        className={
+                                                            this.props.className
+                                                        }
+                                                    >
+                                                        <ModalHeader 
+                                                            toggle={
+                                                                this.toggle3
+                                                            }
+                                                            charCode="X"
+                                                        >
+                                                            Modal title
+                                                        </ModalHeader>
+                                                        <ModalBody
+                                                           
+                                                        >
+                                                            <Tabs />
+                                                        </ModalBody>
+                                                    </Modal>
                                                 </DropdownItem>
                                                 <DropdownItem>
-                                                    Waiting...
-                                                </DropdownItem>
-                                                <DropdownItem>
-                                                    Waiting...
-                                                </DropdownItem>
-                                            </DropdownMenu>
-                                        </Dropdown>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">2</th>
-                                    <td>Jacob</td>
-                                    <td>Thornton</td>
-                                    <td>@fat</td>
-                                    <td>
-                                        <Dropdown
-                                            isOpen={this.state.dropdownOpen1}
-                                            toggle={this.toggle1}
-                                        >
-                                            <DropdownToggle caret>
-                                                <i className="far fa-edit" />
-                                            </DropdownToggle>
-                                            <DropdownMenu>
-                                                <DropdownItem>
-                                                    Waiting...
-                                                </DropdownItem>
-                                                <DropdownItem>
-                                                    Waiting...
-                                                </DropdownItem>
-                                                <DropdownItem>
-                                                    Waiting...
-                                                </DropdownItem>
-                                            </DropdownMenu>
-                                        </Dropdown>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">3</th>
-                                    <td>Larry</td>
-                                    <td>the Bird</td>
-                                    <td>@twitter</td>
-                                    <td>
-                                        <Dropdown
-                                            isOpen={this.state.dropdownOpen2}
-                                            toggle={this.toggle2}
-                                        >
-                                            <DropdownToggle caret>
-                                                <i className="far fa-edit" />
-                                            </DropdownToggle>
-                                            <DropdownMenu>
-                                                <DropdownItem>
-                                                    Waiting...
-                                                </DropdownItem>
-                                                <DropdownItem>
-                                                    Waiting...
-                                                </DropdownItem>
-                                                <DropdownItem>
-                                                    Waiting...
+                                                    <p>Delete</p>
                                                 </DropdownItem>
                                             </DropdownMenu>
                                         </Dropdown>
@@ -264,5 +250,3 @@ class Examination extends Component {
         )
     }
 }
-
-export default Examination
