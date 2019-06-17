@@ -144,7 +144,6 @@ export default class Examination extends Component {
                                                             }
                                                             charCode="X"
                                                         >
-                                                            Modal title
                                                         </ModalHeader>
                                                         <ModalBody>
                                                             <Tabs />

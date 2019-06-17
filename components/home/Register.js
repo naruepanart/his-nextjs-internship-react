@@ -173,7 +173,7 @@ export default class Register extends Component {
                                                                 </Col>
                                                             </Row>
                                                         </Col>
-                                                        <Col md="2">
+                                                        <Col md="1">
                                                             <img
                                                                 width="195"
                                                                 src={picture}
