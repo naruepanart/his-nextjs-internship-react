@@ -8,7 +8,6 @@ import {
     DropdownToggle,
     DropdownMenu,
     DropdownItem,
-    CardHeader,
     Modal,
     ModalHeader,
     ModalBody,
@@ -19,9 +18,6 @@ import {
     TabPane,
     Row,
     Card,
-    CardTitle,
-    CardText,
-    Button,
     Col,
 } from "reactstrap"
 
@@ -214,8 +210,6 @@ export default class Dispensing extends Component {
                                                                             }
                                                                             charCode="X"
                                                                         >
-                                                                            Modal
-                                                                            title
                                                                         </ModalHeader>
                                                                         <ModalBody>
                                                                             <Tabs />
