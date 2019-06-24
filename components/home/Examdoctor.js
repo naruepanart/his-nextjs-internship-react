@@ -221,10 +221,8 @@ export default class Examdoctor extends Component {
                                                                             }
                                                                             charCode="X"
                                                                         >
-                                                                            <Navbar>
-                                                                                Screening
-                                                                                Detail
-                                                                            </Navbar>
+                                                                            Screening
+                                                                            Detail
                                                                         </ModalHeader>
                                                                         <ModalBody>
                                                                             <Tabs />

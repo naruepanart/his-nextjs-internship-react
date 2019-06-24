@@ -1,7 +1,6 @@
-# Roadmap code
+# Pattern code
 
-### การ setState
-
+การ setState
 ```
 this.setState(prevState => ({
     isToggleOn: !prevState.isToggleOn
@@ -14,8 +13,7 @@ toggleModal = () => {
   }
 ```
 
-### การส่งข้อมูล
-
+การส่งข้อมูล es6
 ```
 export default class HelloWorld extends Component {
   import React, { Component } from "react"
@@ -36,8 +34,7 @@ export default class HelloWorld extends Component {
 }
 ```
 
-### การส่งข้อมูลข้าม components
-
+การส่งข้อมูลข้าม components
 ```
 import React, { Component } from "react";
 import About from "./getstate";
@@ -87,8 +84,7 @@ const About = props => {
 export default About;
 ```
 
-### การ post data
-
+การ post data ไปยัง API
 ```
 import React from "react"
 import axios from "axios"
@@ -138,8 +134,7 @@ export default class PersonList extends React.Component {
 
 ```
 
-### การ get data with axios tool
-
+การดึง data โดยใช้ axios 
 ```
 async componentDidMount() {
     const uri = 'https://backend-jsonserver-test.herokuapp.com/users'
@@ -148,8 +143,7 @@ async componentDidMount() {
   }
 ```
 
-## ค้นหาข้อมูลใน table
-
+ค้นหาข้อมูลใน table โดยใช้ react-bootstrap-table
 ```
 
 import React, { Component } from "react"

@@ -143,6 +143,7 @@ export default class Examination extends Component {
                                                             }
                                                             charCode="X"
                                                         >
+                                                            Screening Detail
                                                         </ModalHeader>
                                                         <ModalBody>
                                                             <Tabs />

@@ -187,7 +187,7 @@ export default class Dispensing extends Component {
                                                                         Edit
                                                                     </p>
                                                                     <Modal
-                                                                       size="xl"
+                                                                        size="xl"
                                                                         isOpen={
                                                                             this
                                                                                 .state
@@ -210,6 +210,8 @@ export default class Dispensing extends Component {
                                                                             }
                                                                             charCode="X"
                                                                         >
+                                                                            Screening
+                                                                            Detail
                                                                         </ModalHeader>
                                                                         <ModalBody>
                                                                             <Tabs />
