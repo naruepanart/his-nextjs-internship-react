@@ -221,6 +221,10 @@ export default class Examdoctor extends Component {
                                                                             }
                                                                             charCode="X"
                                                                         >
+                                                                            <Navbar>
+                                                                                Screening
+                                                                                Detail
+                                                                            </Navbar>
                                                                         </ModalHeader>
                                                                         <ModalBody>
                                                                             <Tabs />
@@ -314,7 +318,7 @@ export default class Examdoctor extends Component {
                             data-cls-bar="bg-pink"
                         />
                         <Navbar color="primary" dark className="py-md-0">
-                            <NavbarBrand href="" style={fontSize16px}>  
+                            <NavbarBrand href="" style={fontSize16px}>
                                 ผู้ป่วยได้รับบริการแล้ว
                             </NavbarBrand>
                         </Navbar>
