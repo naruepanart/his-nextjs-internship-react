@@ -13,7 +13,7 @@ or
 
 ```
 docker build -t react-docker-app .
-docker run -p 3000:3000 react-docker-app
+docker run -d -p 3000:3000 --restart=always react-docker-app
 ```
 
 Stop and remove all containers
