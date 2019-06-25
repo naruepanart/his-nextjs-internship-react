@@ -15,8 +15,8 @@ toggleModal = () => {
 
 การส่งข้อมูล es6
 ```
+import React, { Component } from "react"
 export default class HelloWorld extends Component {
-  import React, { Component } from "react"
   state = {
     message: 'Hi'
   };
@@ -230,7 +230,7 @@ const ReactHooks = () => {
     const minusSetCount = () => setCount(count - 1)
     const ResetCount = () => setCount(0)
 
-    const handleclicksetName = () => setName("BENZ")
+    const handleclicksetName = () => setName("Helloooooooooooo")
 
 
     return (
