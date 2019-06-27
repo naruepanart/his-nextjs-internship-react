@@ -1,6 +1,6 @@
 # Pattern code
 
-การ setState
+## การ setState สามารถทำได้ 2 แบบ
 ```
 this.setState(prevState => ({
     isToggleOn: !prevState.isToggleOn
@@ -13,7 +13,7 @@ toggleModal = () => {
   }
 ```
 
-การส่งข้อมูล es6
+## การส่งข้อมูล (ES6)
 ```
 import React, { Component } from "react"
 export default class HelloWorld extends Component {
@@ -22,7 +22,6 @@ export default class HelloWorld extends Component {
   };
 
   logMessage = () => {
-    // This works because arrow funcs adopt the this binding of the enclosing scope.
     console.log(this.state.message);
   };
 
@@ -34,7 +33,7 @@ export default class HelloWorld extends Component {
 }
 ```
 
-การส่งข้อมูลข้าม components
+## การส่งข้อมูลข้าม components
 ```
 import React, { Component } from "react";
 import About from "./getstate";
@@ -84,7 +83,7 @@ const About = props => {
 export default About;
 ```
 
-การ post data ไปยัง API
+## การ post data ไปยัง API
 ```
 import React from "react"
 import axios from "axios"
@@ -134,7 +133,7 @@ export default class PersonList extends React.Component {
 
 ```
 
-การดึง data โดยใช้ axios 
+## การดึง API โดยใช้ axios 
 ```
 async componentDidMount() {
     const uri = 'https://backend-jsonserver-test.herokuapp.com/users'
@@ -143,9 +142,8 @@ async componentDidMount() {
   }
 ```
 
-ค้นหาข้อมูลใน table โดยใช้ react-bootstrap-table
+## ค้นหาข้อมูลใน table โดยใช้ react-bootstrap-table
 ```
-
 import React, { Component } from "react"
 import ToolkitProvider, { Search } from "react-bootstrap-table2-toolkit"
 import BootstrapTable from "react-bootstrap-table-next"
@@ -217,20 +215,19 @@ export default class tabletest extends Component {
 
 ## React Hooks
 
-### State
+### useState
 
 ```
 import React, { useState } from "react"
-
 const ReactHooks = () => {
     const [count, setCount] = useState(0)
-    const [name, setName] = useState("no setName")
+    const [name, setName] = useState("AAAAAAAAA")
 
     const plusSetCount = () => setCount(count + 1)
     const minusSetCount = () => setCount(count - 1)
     const ResetCount = () => setCount(0)
 
-    const handleclicksetName = () => setName("Helloooooooooooo")
+    const handleclicksetName = () => setName("ZZZZZZZZZZ")
 
 
     return (
@@ -241,16 +238,14 @@ const ReactHooks = () => {
             <button onClick={ResetCount}>Reset</button>
 
             <p>Name : {name} </p>
-            <button onClick={handleclicksetName}>setName</button>
+            <button onClick={handleclicksetName}>ChangeName</button>
         </div>
     )
 }
-
 export default ReactHooks
-
 ```
 
-### Send Data with Form
+## Send Data with Form
 ```
 import React, { useState } from "react"
 
@@ -310,7 +305,7 @@ export default ReactHooks
 
 ```
 
-### Fetch API
+## การดึง API โดยใช้ axios แบบ React hooks
 
 ```
 import React, { useState, useEffect } from 'react';
@@ -339,5 +334,4 @@ const ReactHooks = () => {
 }
 
 export default ReactHooks
-
 ```
